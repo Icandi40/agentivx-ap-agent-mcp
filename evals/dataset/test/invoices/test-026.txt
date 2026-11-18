@@ -1,0 +1,18 @@
+From: Morgan Chu <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice 22611 from Summit Line Electrical Inc.
+
+Hi team,
+
+Please find our invoice below for PO Number: PO-1071.
+
+- Shipping labels 4x6 (500), item SLE-1032: 39 units at $12.21 each ($476.19)
+- Drill bit set 29pc, item SLE-7210: 56 units at $193.68 each ($10,846.08)
+- Breaker 20A, item SLE-2520: 19 units at $35.82 each ($680.58)
+
+Amount due: $12,002.85, payable by 12/01/2026.
+Invoice date: 01 Nov 2026
+
+Thanks,
+Morgan Chu
+Summit Line Electrical Inc.

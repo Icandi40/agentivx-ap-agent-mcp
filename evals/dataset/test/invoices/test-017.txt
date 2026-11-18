@@ -1,0 +1,16 @@
+From: Sam Whitfield <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice 84226 from Bluegate Office Supply, Inc.
+
+Hi team,
+
+Please find our invoice below for Purchase Order: PO-1078.
+
+- Pipette tips 200uL (rack), item BGO-939: 16 units at $42.17 each ($674.72)
+
+Amount due: $674.72, payable by December 6, 2026.
+Invoice date: 2026-11-06
+
+Thanks,
+Sam Whitfield
+Bluegate Office Supply, Inc.

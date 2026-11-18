@@ -1,0 +1,17 @@
+From: Morgan Chu <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice INV-53147 from Summit Line Electrical Inc.
+
+Hi team,
+
+Please find our invoice below for Customer PO: 1069.
+
+- Shipping labels 4x6 (500), item SLE-1032: 9 units at $12.21 each ($109.89)
+- Wire nuts assorted, item SLE-4059: 13 units at $104.20 each ($1,354.60)
+
+Amount due: $1,464.49, payable by 12/10/2026.
+Invoice date: 11/10/2026
+
+Thanks,
+Morgan Chu
+Summit Line Electrical Inc.

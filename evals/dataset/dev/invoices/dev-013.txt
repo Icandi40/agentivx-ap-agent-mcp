@@ -1,0 +1,17 @@
+From: Lee Okafor <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice 37783 from Summit Line Electrical, Inc.
+
+Hi team,
+
+Please find our invoice below for P.O. # 1010.
+
+- Toner cartridge, black, item RFS-6149: 7 units at $209.82 each ($1,468.74)
+- Cordless drill 20V, item RFS-167: 27 units at $93.91 each ($2,535.57)
+
+Amount due: $4,004.31, payable by Nov 21, 2026.
+Invoice date: 2026-10-22
+
+Thanks,
+Lee Okafor
+Summit Line Electrical, Inc.

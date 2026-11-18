@@ -1,0 +1,22 @@
+Harbor Point Fasteners, Inc.
+1386 Commerce Way, Suite 282
+Remit to: PO Box 9889, Sample City, ST 93024
+Phone (555) 019-1615
+
+INVOICE
+Invoice #: HA80960
+Invoice Date: October 24, 2026
+Due Date: 11/23/2026
+Customer PO: 1027
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+HPF-9007 | Copy paper, letter, 10 reams | 10 | $83.30 | $833.00
+HPF-8204 | Mop heads (12) | 33 | $155.27 | $5,123.91
+HPF-3438 | Toner cartridge, black | 15 | $19.15 | $287.25
+HPF-3660 | Hex bolts M8 (box of 100) | 19 | $52.74 | $1,002.06
+SVC-743 | Fuel surcharge | 1 | $108.05 | $108.05
+
+Subtotal: $7,354.27
+Total Due: $7,354.27
+Thank you for 12 years of business. Terms: Net 30.

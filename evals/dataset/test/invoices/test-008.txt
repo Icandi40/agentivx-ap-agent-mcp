@@ -1,0 +1,19 @@
+From: Sam Whitfield <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice RE51913 from Redfern Freight Services, Inc.
+
+Hi team,
+
+Please find our invoice below for PO Number: PO-1075.
+
+- Wire nuts assorted, item RFS-2084: 1 units at $205.03 each ($205.03)
+- Floor cleaner concentrate 5 gal, item RFS-3815: 56 units at $199.05 each ($11,146.80)
+- Toner cartridge, black, item RFS-8936: 27 units at $148.45 each ($4,008.15)
+- LED panel 2x4 40W, item RFS-483: 9 units at $172.26 each ($1,550.34)
+
+Amount due: $16,910.32, payable by 11/07/2026.
+Invoice date: October 8, 2026
+
+Thanks,
+Sam Whitfield
+Redfern Freight Services, Inc.

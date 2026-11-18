@@ -1,0 +1,20 @@
+Cedar Ridge Packaging Co.
+2304 Commerce Way, Suite 37
+Remit to: PO Box 6666, Sample City, ST 12370
+Phone (555) 017-9498
+
+INVOICE
+Invoice #: CE5263
+Invoice Date: November 5, 2026
+Due Date: 20 Dec 2026
+P.O. # 1011
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+CRP-5619 | LED panel 2x4 40W | 44 | $162.69 | $7,158.36
+CRP-9341 | Cable ties 11in (1000) | 46 | $184.62 | $8,492.52
+CRP-9880 | Wire nuts assorted | 6 | $142.78 | $856.68
+
+Subtotal: $16,507.56
+Total Due: $16,507.56
+Thank you for 12 years of business. Terms: Net 45.

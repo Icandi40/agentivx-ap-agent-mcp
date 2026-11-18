@@ -1,0 +1,18 @@
+From: Priya Natarajan <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice INV-90478 from Ironleaf Tools Inc.
+
+Hi team,
+
+Please find our invoice below for P.O. # 1060.
+
+- Floor cleaner concentrate 5 gal, item ILT-1020: 27 units at $34.45 each ($930.15)
+- Floor cleaner concentrate 5 gal, item ILT-7488: 47 units at $6.82 each ($320.54)
+- Wire nuts assorted, item ILT-9000: 13 units at $86.09 each ($1,119.17)
+
+Amount due: $2,369.86, payable by 21 Oct 2026.
+Invoice date: October 6, 2026
+
+Thanks,
+Priya Natarajan
+Ironleaf Tools Inc.

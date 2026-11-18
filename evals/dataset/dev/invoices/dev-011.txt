@@ -1,0 +1,19 @@
+From: Sam Whitfield <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice KE2536 from Keystone Lab Supply
+
+Hi team,
+
+Please find our invoice below for Purchase Order: PO-1022.
+
+- Mop heads (12), item KLS-4661: 12 units at $217.06 each ($2,604.72)
+- Breaker 20A, item KLS-6680: 23 units at $63.29 each ($1,455.67)
+- Mop heads (12), item KLS-2343: 22 units at $190.48 each ($4,190.56)
+- Fuel surcharge, item SVC-396: 1 units at $71.53 each ($71.53)
+
+Amount due: 8,322.48 USD, payable by Dec 16, 2026.
+Invoice date: 10/17/2026
+
+Thanks,
+Sam Whitfield
+Keystone Lab Supply

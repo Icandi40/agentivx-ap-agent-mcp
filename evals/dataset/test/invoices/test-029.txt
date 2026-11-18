@@ -1,0 +1,20 @@
+Redfern Freight Services
+589 Commerce Way, Suite 96
+Remit to: PO Box 3050, Sample City, ST 21355
+Phone (555) 012-6902
+
+INVOICE
+Invoice #: 8859
+Invoice Date: Oct 31, 2026
+Due Date: November 30, 2026
+Your PO PO-1077
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+HPF-396 | Pallet wrap 18in | 32 | $85.74 | $2,743.68
+HPF-8204 | Mop heads (12) | 17 | $155.27 | $2,639.59
+HPF-3512 | Cable ties 11in (1000) | 15 | $80.16 | $1,202.40
+
+Subtotal: $6,585.67
+Total Due: $6,585.67
+Thank you for 12 years of business. Terms: Net 30.

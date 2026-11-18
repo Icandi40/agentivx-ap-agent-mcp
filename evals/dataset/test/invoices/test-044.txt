@@ -1,0 +1,18 @@
+Keystone Lab Supply
+2123 Commerce Way, Suite 239
+Remit to: PO Box 1908, Sample City, ST 63933
+Phone (555) 017-1673
+
+INVOICE
+Invoice #: INV-14123
+Invoice Date: 2026-10-30
+Due Date: 29 Dec 2026
+Customer PO: 8526
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+KLS-2513 | Shipping labels 4x6 (500) | 10 | $124.27 | $1,242.70
+
+Subtotal: $1,242.70
+Total Due: $1,242.70
+Thank you for 12 years of business. Terms: Net 60.

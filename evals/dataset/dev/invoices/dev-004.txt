@@ -1,0 +1,21 @@
+IRONLEAF TOOLS
+5117 Commerce Way, Suite 393
+Remit to: PO Box 3277, Sample City, ST 40252
+Phone (555) 017-4628
+
+INVOICE
+Invoice #: INV-64719
+Invoice Date: October 19, 2026
+Due Date: November 3, 2026
+PO Number: PO-1031
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+ILT-5240 | Toner cartridge, black | 55 | $153.88 | $8,463.40
+ILT-1371 | Breaker 20A | 44 | $127.35 | $5,603.40
+ILT-4522 | Drill bit set 29pc | 17 | $154.26 | $2,622.42
+ILT-9838 | Drill bit set 29pc | 9 | $128.84 | $1,159.56
+
+Subtotal: $17,848.78
+Total Due: $17,848.78
+Thank you for 12 years of business. Terms: Net 15.

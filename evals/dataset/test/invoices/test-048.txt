@@ -1,0 +1,16 @@
+From: Priya Natarajan <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice KE53776 from Keystone Lab Supply
+
+Hi team,
+
+Please find our invoice below for Customer PO: 8564.
+
+- Shipping labels 4x6 (500), item KLS-2513: 7 units at $124.27 each ($869.89)
+
+Amount due: $869.89, payable by 05 Jan 2027.
+Invoice date: Nov 6, 2026
+
+Thanks,
+Priya Natarajan
+Keystone Lab Supply

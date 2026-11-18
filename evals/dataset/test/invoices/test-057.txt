@@ -1,0 +1,20 @@
+Redfern Freight Services
+7219 Commerce Way, Suite 72
+Remit to: PO Box 109, Sample City, ST 39494
+Phone (555) 010-5503
+
+INVOICE
+Invoice #: RE63083
+Invoice Date: 2026-10-21
+Due Date: November 20, 2026
+Purchase Order: PO-1044
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+RFS-3815 | Floor cleaner concentrate 5 gal | 29 | $199.05 | $5,772.45
+RFS-3561 | Pallet wrap 18in | 13 | $117.45 | $1,526.85
+RFS-2084 | Wire nuts assorted | 24 | $205.03 | $4,920.72
+
+Subtotal: $12,220.02
+Total Due: $12,220.02
+Thank you for 12 years of business. Terms: Net 30.

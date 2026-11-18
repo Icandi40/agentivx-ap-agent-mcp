@@ -1,0 +1,21 @@
+Ironleaf Tools Inc.
+1381 Commerce Way, Suite 231
+Remit to: PO Box 4644, Sample City, ST 34313
+Phone (555) 016-6824
+
+INVOICE
+Invoice #: INV-53887
+Invoice Date: Nov 2, 2026
+Due Date: 2026-11-17
+Customer PO: 1030
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+ILT-7488 | Floor cleaner concentrate 5 gal | 11 | $6.82 | $75.02
+ILT-3319 | LED panel 2x4 40W | 13 | $177.27 | $2,304.51
+ILT-9106 | Copy paper, letter, 10 reams | 20 | $208.12 | $4,162.40
+ILT-1814 | Drill bit set 29pc | 35 | $60.47 | $2,116.45
+
+Subtotal: $8,658.38
+Total Due: $8,658.38
+Thank you for 12 years of business. Terms: Net 15.

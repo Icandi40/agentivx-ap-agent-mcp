@@ -1,0 +1,19 @@
+From: Morgan Chu <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice 21849 from BLUEGATE OFFICE SUPPLY
+
+Hi team,
+
+Please find our invoice below for P.O. # 1004.
+
+- Breaker 20A, item BGO-863: 6 units at $189.29 each ($1,135.74)
+- Safety glasses, item BGO-2029: 49 units at $124.58 each ($6,104.42)
+- Mop heads (12), item BGO-4844: 2 units at $34.30 each ($68.60)
+- Copy paper, letter, 10 reams, item BGO-9651: 35 units at $128.23 each ($4,488.05)
+
+Amount due: 11,796.81 USD, payable by 11/29/2026.
+Invoice date: 2026-10-30
+
+Thanks,
+Morgan Chu
+BLUEGATE OFFICE SUPPLY

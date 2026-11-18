@@ -1,0 +1,3605 @@
+{
+  "vendors": [
+    {
+      "id": "1",
+      "display_name": "Harbor Point Fasteners LLC",
+      "email": "billing@harborpoint-sample.test",
+      "terms_days": 30
+    },
+    {
+      "id": "2",
+      "display_name": "Bluegate Office Supply",
+      "email": "billing@bluegate-sample.test",
+      "terms_days": 30
+    },
+    {
+      "id": "3",
+      "display_name": "Cedar Ridge Packaging Co.",
+      "email": "billing@cedarridge-sample.test",
+      "terms_days": 45
+    },
+    {
+      "id": "4",
+      "display_name": "Summit Line Electrical Inc.",
+      "email": "billing@summitline-sample.test",
+      "terms_days": 30
+    },
+    {
+      "id": "5",
+      "display_name": "Ironleaf Tools Inc.",
+      "email": "billing@ironleaf-sample.test",
+      "terms_days": 15
+    },
+    {
+      "id": "6",
+      "display_name": "Brightwater Janitorial",
+      "email": "billing@brightwater-sample.test",
+      "terms_days": 30
+    },
+    {
+      "id": "7",
+      "display_name": "Keystone Lab Supply",
+      "email": "billing@keystonelab-sample.test",
+      "terms_days": 60
+    },
+    {
+      "id": "8",
+      "display_name": "Redfern Freight Services",
+      "email": "billing@redfern-sample.test",
+      "terms_days": 30
+    }
+  ],
+  "purchase_orders": [
+    {
+      "id": "500",
+      "doc_number": "PO-1001",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-8863",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "63.33",
+          "qty": 20
+        },
+        {
+          "sku": "SLE-4059",
+          "description": "Wire nuts assorted",
+          "unit_price": "104.20",
+          "qty": 22
+        },
+        {
+          "sku": "SLE-2520",
+          "description": "Breaker 20A",
+          "unit_price": "35.82",
+          "qty": 51
+        },
+        {
+          "sku": "SLE-7210",
+          "description": "Drill bit set 29pc",
+          "unit_price": "193.68",
+          "qty": 22
+        }
+      ]
+    },
+    {
+      "id": "501",
+      "doc_number": "PO-1002",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-3242",
+          "description": "Wire nuts assorted",
+          "unit_price": "173.27",
+          "qty": 27
+        }
+      ]
+    },
+    {
+      "id": "502",
+      "doc_number": "PO-1003",
+      "vendor_id": "6",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BWJ-7491",
+          "description": "Packing tape 3in (36)",
+          "unit_price": "34.43",
+          "qty": 41
+        },
+        {
+          "sku": "BWJ-6726",
+          "description": "Safety glasses",
+          "unit_price": "154.55",
+          "qty": 26
+        },
+        {
+          "sku": "BWJ-9602",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "200.49",
+          "qty": 46
+        },
+        {
+          "sku": "BWJ-5821",
+          "description": "Cordless drill 20V",
+          "unit_price": "53.17",
+          "qty": 12
+        }
+      ]
+    },
+    {
+      "id": "503",
+      "doc_number": "PO-1004",
+      "vendor_id": "6",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BWJ-7491",
+          "description": "Packing tape 3in (36)",
+          "unit_price": "34.43",
+          "qty": 13
+        }
+      ]
+    },
+    {
+      "id": "504",
+      "doc_number": "PO-1005",
+      "vendor_id": "1",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "HPF-3512",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "80.16",
+          "qty": 49
+        },
+        {
+          "sku": "HPF-3660",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "52.74",
+          "qty": 38
+        }
+      ]
+    },
+    {
+      "id": "505",
+      "doc_number": "PO-1006",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-4945",
+          "description": "Toner cartridge, black",
+          "unit_price": "132.45",
+          "qty": 34
+        },
+        {
+          "sku": "CRP-9880",
+          "description": "Wire nuts assorted",
+          "unit_price": "142.78",
+          "qty": 39
+        }
+      ]
+    },
+    {
+      "id": "506",
+      "doc_number": "PO-1007",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-1680",
+          "description": "Packing tape 3in (36)",
+          "unit_price": "48.23",
+          "qty": 43
+        },
+        {
+          "sku": "BGO-9277",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "204.09",
+          "qty": 7
+        }
+      ]
+    },
+    {
+      "id": "507",
+      "doc_number": "PO-1008",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-9000",
+          "description": "Wire nuts assorted",
+          "unit_price": "86.09",
+          "qty": 52
+        }
+      ]
+    },
+    {
+      "id": "508",
+      "doc_number": "PO-1009",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-939",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "42.17",
+          "qty": 35
+        }
+      ]
+    },
+    {
+      "id": "509",
+      "doc_number": "PO-1010",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-2652",
+          "description": "Wire nuts assorted",
+          "unit_price": "165.06",
+          "qty": 6
+        },
+        {
+          "sku": "CRP-9341",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "184.62",
+          "qty": 15
+        },
+        {
+          "sku": "CRP-4945",
+          "description": "Toner cartridge, black",
+          "unit_price": "132.45",
+          "qty": 57
+        },
+        {
+          "sku": "CRP-5619",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "162.69",
+          "qty": 46
+        }
+      ]
+    },
+    {
+      "id": "510",
+      "doc_number": "PO-1011",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-5619",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "162.69",
+          "qty": 44
+        },
+        {
+          "sku": "CRP-9341",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "184.62",
+          "qty": 46
+        },
+        {
+          "sku": "CRP-9880",
+          "description": "Wire nuts assorted",
+          "unit_price": "142.78",
+          "qty": 6
+        }
+      ]
+    },
+    {
+      "id": "511",
+      "doc_number": "PO-1012",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-4059",
+          "description": "Wire nuts assorted",
+          "unit_price": "104.20",
+          "qty": 34
+        }
+      ]
+    },
+    {
+      "id": "512",
+      "doc_number": "PO-1013",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-2652",
+          "description": "Wire nuts assorted",
+          "unit_price": "165.06",
+          "qty": 59
+        },
+        {
+          "sku": "CRP-9880",
+          "description": "Wire nuts assorted",
+          "unit_price": "142.78",
+          "qty": 14
+        }
+      ]
+    },
+    {
+      "id": "513",
+      "doc_number": "PO-1014",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-8936",
+          "description": "Toner cartridge, black",
+          "unit_price": "148.45",
+          "qty": 43
+        },
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 60
+        }
+      ]
+    },
+    {
+      "id": "514",
+      "doc_number": "PO-1015",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-2461",
+          "description": "Nitrile gloves, case",
+          "unit_price": "129.55",
+          "qty": 52
+        },
+        {
+          "sku": "BGO-939",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "42.17",
+          "qty": 39
+        }
+      ]
+    },
+    {
+      "id": "515",
+      "doc_number": "PO-1016",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-2084",
+          "description": "Wire nuts assorted",
+          "unit_price": "205.03",
+          "qty": 22
+        },
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 39
+        },
+        {
+          "sku": "RFS-3815",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "199.05",
+          "qty": 54
+        },
+        {
+          "sku": "RFS-8497",
+          "description": "Mop heads (12)",
+          "unit_price": "93.79",
+          "qty": 42
+        }
+      ]
+    },
+    {
+      "id": "516",
+      "doc_number": "PO-1017",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-2484",
+          "description": "Mop heads (12)",
+          "unit_price": "61.85",
+          "qty": 26
+        },
+        {
+          "sku": "KLS-8798",
+          "description": "Mop heads (12)",
+          "unit_price": "179.57",
+          "qty": 50
+        },
+        {
+          "sku": "KLS-3242",
+          "description": "Wire nuts assorted",
+          "unit_price": "173.27",
+          "qty": 55
+        }
+      ]
+    },
+    {
+      "id": "517",
+      "doc_number": "PO-1018",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-7879",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "182.77",
+          "qty": 22
+        }
+      ]
+    },
+    {
+      "id": "518",
+      "doc_number": "PO-1019",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-1680",
+          "description": "Packing tape 3in (36)",
+          "unit_price": "48.23",
+          "qty": 28
+        },
+        {
+          "sku": "BGO-2610",
+          "description": "Wire nuts assorted",
+          "unit_price": "190.14",
+          "qty": 35
+        },
+        {
+          "sku": "BGO-9277",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "204.09",
+          "qty": 34
+        }
+      ]
+    },
+    {
+      "id": "519",
+      "doc_number": "PO-1020",
+      "vendor_id": "1",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "HPF-3438",
+          "description": "Toner cartridge, black",
+          "unit_price": "19.15",
+          "qty": 10
+        },
+        {
+          "sku": "HPF-8204",
+          "description": "Mop heads (12)",
+          "unit_price": "155.27",
+          "qty": 60
+        },
+        {
+          "sku": "HPF-3512",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "80.16",
+          "qty": 2
+        },
+        {
+          "sku": "HPF-3660",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "52.74",
+          "qty": 25
+        }
+      ]
+    },
+    {
+      "id": "520",
+      "doc_number": "PO-1021",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-2610",
+          "description": "Wire nuts assorted",
+          "unit_price": "190.14",
+          "qty": 50
+        },
+        {
+          "sku": "BGO-1680",
+          "description": "Packing tape 3in (36)",
+          "unit_price": "48.23",
+          "qty": 60
+        }
+      ]
+    },
+    {
+      "id": "521",
+      "doc_number": "PO-1022",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-9880",
+          "description": "Wire nuts assorted",
+          "unit_price": "142.78",
+          "qty": 17
+        }
+      ]
+    },
+    {
+      "id": "522",
+      "doc_number": "PO-1023",
+      "vendor_id": "6",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BWJ-6985",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "190.33",
+          "qty": 12
+        },
+        {
+          "sku": "BWJ-5821",
+          "description": "Cordless drill 20V",
+          "unit_price": "53.17",
+          "qty": 35
+        },
+        {
+          "sku": "BWJ-6726",
+          "description": "Safety glasses",
+          "unit_price": "154.55",
+          "qty": 59
+        }
+      ]
+    },
+    {
+      "id": "523",
+      "doc_number": "PO-1024",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-2886",
+          "description": "Mop heads (12)",
+          "unit_price": "61.47",
+          "qty": 21
+        }
+      ]
+    },
+    {
+      "id": "524",
+      "doc_number": "PO-1025",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-1020",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "34.45",
+          "qty": 11
+        },
+        {
+          "sku": "ILT-9000",
+          "description": "Wire nuts assorted",
+          "unit_price": "86.09",
+          "qty": 32
+        }
+      ]
+    },
+    {
+      "id": "525",
+      "doc_number": "PO-1026",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-9880",
+          "description": "Wire nuts assorted",
+          "unit_price": "142.78",
+          "qty": 49
+        },
+        {
+          "sku": "CRP-2652",
+          "description": "Wire nuts assorted",
+          "unit_price": "165.06",
+          "qty": 31
+        },
+        {
+          "sku": "CRP-5962",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "16.70",
+          "qty": 5
+        },
+        {
+          "sku": "CRP-4945",
+          "description": "Toner cartridge, black",
+          "unit_price": "132.45",
+          "qty": 13
+        }
+      ]
+    },
+    {
+      "id": "526",
+      "doc_number": "PO-1027",
+      "vendor_id": "1",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "HPF-9007",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "83.30",
+          "qty": 21
+        },
+        {
+          "sku": "HPF-8204",
+          "description": "Mop heads (12)",
+          "unit_price": "155.27",
+          "qty": 40
+        },
+        {
+          "sku": "HPF-3438",
+          "description": "Toner cartridge, black",
+          "unit_price": "19.15",
+          "qty": 49
+        },
+        {
+          "sku": "HPF-3660",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "52.74",
+          "qty": 19
+        }
+      ]
+    },
+    {
+      "id": "527",
+      "doc_number": "PO-1028",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-3815",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "199.05",
+          "qty": 3
+        },
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 17
+        }
+      ]
+    },
+    {
+      "id": "528",
+      "doc_number": "PO-1029",
+      "vendor_id": "1",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "HPF-396",
+          "description": "Pallet wrap 18in",
+          "unit_price": "85.74",
+          "qty": 45
+        }
+      ]
+    },
+    {
+      "id": "529",
+      "doc_number": "PO-1030",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-7488",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "6.82",
+          "qty": 11
+        },
+        {
+          "sku": "ILT-3319",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "177.27",
+          "qty": 13
+        },
+        {
+          "sku": "ILT-9106",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "208.12",
+          "qty": 23
+        },
+        {
+          "sku": "ILT-1814",
+          "description": "Drill bit set 29pc",
+          "unit_price": "60.47",
+          "qty": 35
+        }
+      ]
+    },
+    {
+      "id": "530",
+      "doc_number": "PO-1031",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-3242",
+          "description": "Wire nuts assorted",
+          "unit_price": "173.27",
+          "qty": 55
+        },
+        {
+          "sku": "KLS-2484",
+          "description": "Mop heads (12)",
+          "unit_price": "61.85",
+          "qty": 14
+        },
+        {
+          "sku": "KLS-2513",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "124.27",
+          "qty": 21
+        },
+        {
+          "sku": "KLS-2886",
+          "description": "Mop heads (12)",
+          "unit_price": "61.47",
+          "qty": 46
+        }
+      ]
+    },
+    {
+      "id": "531",
+      "doc_number": "PO-1032",
+      "vendor_id": "1",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "HPF-396",
+          "description": "Pallet wrap 18in",
+          "unit_price": "85.74",
+          "qty": 35
+        },
+        {
+          "sku": "HPF-3660",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "52.74",
+          "qty": 27
+        },
+        {
+          "sku": "HPF-3438",
+          "description": "Toner cartridge, black",
+          "unit_price": "19.15",
+          "qty": 4
+        }
+      ]
+    },
+    {
+      "id": "532",
+      "doc_number": "PO-1033",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-9000",
+          "description": "Wire nuts assorted",
+          "unit_price": "86.09",
+          "qty": 20
+        },
+        {
+          "sku": "ILT-1814",
+          "description": "Drill bit set 29pc",
+          "unit_price": "60.47",
+          "qty": 33
+        },
+        {
+          "sku": "ILT-9106",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "208.12",
+          "qty": 22
+        }
+      ]
+    },
+    {
+      "id": "533",
+      "doc_number": "PO-1034",
+      "vendor_id": "6",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BWJ-9602",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "200.49",
+          "qty": 19
+        }
+      ]
+    },
+    {
+      "id": "534",
+      "doc_number": "PO-1035",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-1032",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "12.21",
+          "qty": 3
+        },
+        {
+          "sku": "SLE-6561",
+          "description": "Corrugated boxes 18x12x12",
+          "unit_price": "114.01",
+          "qty": 25
+        },
+        {
+          "sku": "SLE-8863",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "63.33",
+          "qty": 8
+        }
+      ]
+    },
+    {
+      "id": "535",
+      "doc_number": "PO-1036",
+      "vendor_id": "1",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "HPF-3512",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "80.16",
+          "qty": 47
+        }
+      ]
+    },
+    {
+      "id": "536",
+      "doc_number": "PO-1037",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-9880",
+          "description": "Wire nuts assorted",
+          "unit_price": "142.78",
+          "qty": 30
+        },
+        {
+          "sku": "CRP-5619",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "162.69",
+          "qty": 53
+        },
+        {
+          "sku": "CRP-9341",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "184.62",
+          "qty": 12
+        }
+      ]
+    },
+    {
+      "id": "537",
+      "doc_number": "PO-1038",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-4945",
+          "description": "Toner cartridge, black",
+          "unit_price": "132.45",
+          "qty": 11
+        },
+        {
+          "sku": "CRP-5962",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "16.70",
+          "qty": 30
+        },
+        {
+          "sku": "CRP-2652",
+          "description": "Wire nuts assorted",
+          "unit_price": "165.06",
+          "qty": 18
+        },
+        {
+          "sku": "CRP-5619",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "162.69",
+          "qty": 8
+        }
+      ]
+    },
+    {
+      "id": "538",
+      "doc_number": "PO-1039",
+      "vendor_id": "6",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BWJ-7491",
+          "description": "Packing tape 3in (36)",
+          "unit_price": "34.43",
+          "qty": 31
+        },
+        {
+          "sku": "BWJ-6985",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "190.33",
+          "qty": 27
+        },
+        {
+          "sku": "BWJ-9602",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "200.49",
+          "qty": 11
+        },
+        {
+          "sku": "BWJ-4470",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "78.76",
+          "qty": 16
+        }
+      ]
+    },
+    {
+      "id": "539",
+      "doc_number": "PO-1040",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-5619",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "162.69",
+          "qty": 47
+        },
+        {
+          "sku": "CRP-4945",
+          "description": "Toner cartridge, black",
+          "unit_price": "132.45",
+          "qty": 55
+        },
+        {
+          "sku": "CRP-5962",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "16.70",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "540",
+      "doc_number": "PO-1041",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-1814",
+          "description": "Drill bit set 29pc",
+          "unit_price": "60.47",
+          "qty": 19
+        },
+        {
+          "sku": "ILT-3319",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "177.27",
+          "qty": 13
+        },
+        {
+          "sku": "ILT-9106",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "208.12",
+          "qty": 23
+        }
+      ]
+    },
+    {
+      "id": "541",
+      "doc_number": "PO-1042",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 22
+        },
+        {
+          "sku": "RFS-3561",
+          "description": "Pallet wrap 18in",
+          "unit_price": "117.45",
+          "qty": 8
+        },
+        {
+          "sku": "RFS-2084",
+          "description": "Wire nuts assorted",
+          "unit_price": "205.03",
+          "qty": 34
+        }
+      ]
+    },
+    {
+      "id": "542",
+      "doc_number": "PO-1043",
+      "vendor_id": "6",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BWJ-9602",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "200.49",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "id": "543",
+      "doc_number": "PO-1044",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-3815",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "199.05",
+          "qty": 29
+        },
+        {
+          "sku": "RFS-3561",
+          "description": "Pallet wrap 18in",
+          "unit_price": "117.45",
+          "qty": 46
+        },
+        {
+          "sku": "RFS-2084",
+          "description": "Wire nuts assorted",
+          "unit_price": "205.03",
+          "qty": 30
+        }
+      ]
+    },
+    {
+      "id": "544",
+      "doc_number": "PO-1045",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-2084",
+          "description": "Wire nuts assorted",
+          "unit_price": "205.03",
+          "qty": 39
+        },
+        {
+          "sku": "RFS-8497",
+          "description": "Mop heads (12)",
+          "unit_price": "93.79",
+          "qty": 38
+        },
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 60
+        }
+      ]
+    },
+    {
+      "id": "545",
+      "doc_number": "PO-1046",
+      "vendor_id": "6",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BWJ-5821",
+          "description": "Cordless drill 20V",
+          "unit_price": "53.17",
+          "qty": 20
+        },
+        {
+          "sku": "BWJ-4470",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "78.76",
+          "qty": 8
+        },
+        {
+          "sku": "BWJ-9602",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "200.49",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "id": "546",
+      "doc_number": "PO-1047",
+      "vendor_id": "1",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "HPF-3438",
+          "description": "Toner cartridge, black",
+          "unit_price": "19.15",
+          "qty": 9
+        },
+        {
+          "sku": "HPF-8204",
+          "description": "Mop heads (12)",
+          "unit_price": "155.27",
+          "qty": 41
+        },
+        {
+          "sku": "HPF-9007",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "83.30",
+          "qty": 6
+        }
+      ]
+    },
+    {
+      "id": "547",
+      "doc_number": "PO-1048",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-2084",
+          "description": "Wire nuts assorted",
+          "unit_price": "205.03",
+          "qty": 50
+        }
+      ]
+    },
+    {
+      "id": "548",
+      "doc_number": "PO-1049",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-4945",
+          "description": "Toner cartridge, black",
+          "unit_price": "132.45",
+          "qty": 30
+        },
+        {
+          "sku": "CRP-9880",
+          "description": "Wire nuts assorted",
+          "unit_price": "142.78",
+          "qty": 60
+        }
+      ]
+    },
+    {
+      "id": "549",
+      "doc_number": "PO-1050",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-3561",
+          "description": "Pallet wrap 18in",
+          "unit_price": "117.45",
+          "qty": 14
+        }
+      ]
+    },
+    {
+      "id": "550",
+      "doc_number": "PO-1051",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-7488",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "6.82",
+          "qty": 37
+        },
+        {
+          "sku": "ILT-1814",
+          "description": "Drill bit set 29pc",
+          "unit_price": "60.47",
+          "qty": 10
+        }
+      ]
+    },
+    {
+      "id": "551",
+      "doc_number": "PO-1052",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-9277",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "204.09",
+          "qty": 31
+        }
+      ]
+    },
+    {
+      "id": "552",
+      "doc_number": "PO-1053",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-2652",
+          "description": "Wire nuts assorted",
+          "unit_price": "165.06",
+          "qty": 29
+        }
+      ]
+    },
+    {
+      "id": "553",
+      "doc_number": "PO-1054",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-1680",
+          "description": "Packing tape 3in (36)",
+          "unit_price": "48.23",
+          "qty": 8
+        },
+        {
+          "sku": "BGO-939",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "42.17",
+          "qty": 60
+        },
+        {
+          "sku": "BGO-1854",
+          "description": "Drill bit set 29pc",
+          "unit_price": "95.69",
+          "qty": 41
+        },
+        {
+          "sku": "BGO-2610",
+          "description": "Wire nuts assorted",
+          "unit_price": "190.14",
+          "qty": 34
+        }
+      ]
+    },
+    {
+      "id": "554",
+      "doc_number": "PO-1055",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-5619",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "162.69",
+          "qty": 41
+        }
+      ]
+    },
+    {
+      "id": "555",
+      "doc_number": "PO-1056",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-7879",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "182.77",
+          "qty": 47
+        },
+        {
+          "sku": "KLS-2886",
+          "description": "Mop heads (12)",
+          "unit_price": "61.47",
+          "qty": 51
+        },
+        {
+          "sku": "KLS-3242",
+          "description": "Wire nuts assorted",
+          "unit_price": "173.27",
+          "qty": 26
+        },
+        {
+          "sku": "KLS-2484",
+          "description": "Mop heads (12)",
+          "unit_price": "61.85",
+          "qty": 25
+        }
+      ]
+    },
+    {
+      "id": "556",
+      "doc_number": "PO-1057",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-1032",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "12.21",
+          "qty": 51
+        },
+        {
+          "sku": "SLE-7210",
+          "description": "Drill bit set 29pc",
+          "unit_price": "193.68",
+          "qty": 50
+        }
+      ]
+    },
+    {
+      "id": "557",
+      "doc_number": "PO-1058",
+      "vendor_id": "6",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BWJ-6726",
+          "description": "Safety glasses",
+          "unit_price": "154.55",
+          "qty": 57
+        }
+      ]
+    },
+    {
+      "id": "558",
+      "doc_number": "PO-1059",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-9341",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "184.62",
+          "qty": 7
+        },
+        {
+          "sku": "CRP-4945",
+          "description": "Toner cartridge, black",
+          "unit_price": "132.45",
+          "qty": 45
+        },
+        {
+          "sku": "CRP-5962",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "16.70",
+          "qty": 8
+        }
+      ]
+    },
+    {
+      "id": "559",
+      "doc_number": "PO-1060",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-1020",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "34.45",
+          "qty": 28
+        },
+        {
+          "sku": "ILT-7488",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "6.82",
+          "qty": 47
+        },
+        {
+          "sku": "ILT-9000",
+          "description": "Wire nuts assorted",
+          "unit_price": "86.09",
+          "qty": 25
+        }
+      ]
+    },
+    {
+      "id": "560",
+      "doc_number": "PO-1061",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 56
+        }
+      ]
+    },
+    {
+      "id": "561",
+      "doc_number": "PO-1062",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-9000",
+          "description": "Wire nuts assorted",
+          "unit_price": "86.09",
+          "qty": 32
+        },
+        {
+          "sku": "ILT-7488",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "6.82",
+          "qty": 28
+        },
+        {
+          "sku": "ILT-9106",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "208.12",
+          "qty": 54
+        }
+      ]
+    },
+    {
+      "id": "562",
+      "doc_number": "PO-1063",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-9106",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "208.12",
+          "qty": 55
+        },
+        {
+          "sku": "ILT-7488",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "6.82",
+          "qty": 41
+        }
+      ]
+    },
+    {
+      "id": "563",
+      "doc_number": "PO-1064",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-8863",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "63.33",
+          "qty": 28
+        },
+        {
+          "sku": "SLE-6561",
+          "description": "Corrugated boxes 18x12x12",
+          "unit_price": "114.01",
+          "qty": 57
+        }
+      ]
+    },
+    {
+      "id": "564",
+      "doc_number": "PO-1065",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-9000",
+          "description": "Wire nuts assorted",
+          "unit_price": "86.09",
+          "qty": 23
+        },
+        {
+          "sku": "ILT-3319",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "177.27",
+          "qty": 12
+        },
+        {
+          "sku": "ILT-1020",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "34.45",
+          "qty": 15
+        }
+      ]
+    },
+    {
+      "id": "565",
+      "doc_number": "PO-1066",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-2886",
+          "description": "Mop heads (12)",
+          "unit_price": "61.47",
+          "qty": 22
+        },
+        {
+          "sku": "KLS-3242",
+          "description": "Wire nuts assorted",
+          "unit_price": "173.27",
+          "qty": 47
+        },
+        {
+          "sku": "KLS-2484",
+          "description": "Mop heads (12)",
+          "unit_price": "61.85",
+          "qty": 29
+        }
+      ]
+    },
+    {
+      "id": "566",
+      "doc_number": "PO-1067",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-3242",
+          "description": "Wire nuts assorted",
+          "unit_price": "173.27",
+          "qty": 5
+        },
+        {
+          "sku": "KLS-2513",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "124.27",
+          "qty": 11
+        },
+        {
+          "sku": "KLS-2886",
+          "description": "Mop heads (12)",
+          "unit_price": "61.47",
+          "qty": 43
+        }
+      ]
+    },
+    {
+      "id": "567",
+      "doc_number": "PO-1068",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-5962",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "16.70",
+          "qty": 42
+        },
+        {
+          "sku": "CRP-9341",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "184.62",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "568",
+      "doc_number": "PO-1069",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-1032",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "12.21",
+          "qty": 9
+        },
+        {
+          "sku": "SLE-4059",
+          "description": "Wire nuts assorted",
+          "unit_price": "104.20",
+          "qty": 13
+        }
+      ]
+    },
+    {
+      "id": "569",
+      "doc_number": "PO-1070",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 31
+        },
+        {
+          "sku": "RFS-3561",
+          "description": "Pallet wrap 18in",
+          "unit_price": "117.45",
+          "qty": 21
+        },
+        {
+          "sku": "RFS-8936",
+          "description": "Toner cartridge, black",
+          "unit_price": "148.45",
+          "qty": 22
+        }
+      ]
+    },
+    {
+      "id": "570",
+      "doc_number": "PO-1071",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-1032",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "12.21",
+          "qty": 39
+        },
+        {
+          "sku": "SLE-7210",
+          "description": "Drill bit set 29pc",
+          "unit_price": "193.68",
+          "qty": 56
+        },
+        {
+          "sku": "SLE-2520",
+          "description": "Breaker 20A",
+          "unit_price": "35.82",
+          "qty": 19
+        }
+      ]
+    },
+    {
+      "id": "571",
+      "doc_number": "PO-1072",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 60
+        },
+        {
+          "sku": "RFS-8936",
+          "description": "Toner cartridge, black",
+          "unit_price": "148.45",
+          "qty": 9
+        }
+      ]
+    },
+    {
+      "id": "572",
+      "doc_number": "PO-1073",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-9341",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "184.62",
+          "qty": 28
+        },
+        {
+          "sku": "CRP-4945",
+          "description": "Toner cartridge, black",
+          "unit_price": "132.45",
+          "qty": 4
+        }
+      ]
+    },
+    {
+      "id": "573",
+      "doc_number": "PO-1074",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-2484",
+          "description": "Mop heads (12)",
+          "unit_price": "61.85",
+          "qty": 22
+        },
+        {
+          "sku": "KLS-2513",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "124.27",
+          "qty": 55
+        }
+      ]
+    },
+    {
+      "id": "574",
+      "doc_number": "PO-1075",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-2084",
+          "description": "Wire nuts assorted",
+          "unit_price": "205.03",
+          "qty": 3
+        },
+        {
+          "sku": "RFS-3815",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "199.05",
+          "qty": 56
+        },
+        {
+          "sku": "RFS-8936",
+          "description": "Toner cartridge, black",
+          "unit_price": "148.45",
+          "qty": 27
+        },
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 9
+        }
+      ]
+    },
+    {
+      "id": "575",
+      "doc_number": "PO-1076",
+      "vendor_id": "7",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "KLS-7879",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "182.77",
+          "qty": 53
+        },
+        {
+          "sku": "KLS-2484",
+          "description": "Mop heads (12)",
+          "unit_price": "61.85",
+          "qty": 48
+        },
+        {
+          "sku": "KLS-8798",
+          "description": "Mop heads (12)",
+          "unit_price": "179.57",
+          "qty": 26
+        }
+      ]
+    },
+    {
+      "id": "576",
+      "doc_number": "PO-1077",
+      "vendor_id": "1",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "HPF-396",
+          "description": "Pallet wrap 18in",
+          "unit_price": "85.74",
+          "qty": 32
+        },
+        {
+          "sku": "HPF-8204",
+          "description": "Mop heads (12)",
+          "unit_price": "155.27",
+          "qty": 17
+        },
+        {
+          "sku": "HPF-3512",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "80.16",
+          "qty": 15
+        }
+      ]
+    },
+    {
+      "id": "577",
+      "doc_number": "PO-1078",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-939",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "42.17",
+          "qty": 16
+        }
+      ]
+    },
+    {
+      "id": "578",
+      "doc_number": "PO-1079",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-1032",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "12.21",
+          "qty": 56
+        },
+        {
+          "sku": "SLE-7210",
+          "description": "Drill bit set 29pc",
+          "unit_price": "193.68",
+          "qty": 56
+        },
+        {
+          "sku": "SLE-8863",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "63.33",
+          "qty": 33
+        }
+      ]
+    },
+    {
+      "id": "579",
+      "doc_number": "PO-1080",
+      "vendor_id": "1",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "HPF-8204",
+          "description": "Mop heads (12)",
+          "unit_price": "155.27",
+          "qty": 34
+        },
+        {
+          "sku": "HPF-3438",
+          "description": "Toner cartridge, black",
+          "unit_price": "19.15",
+          "qty": 5
+        },
+        {
+          "sku": "HPF-3660",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "52.74",
+          "qty": 29
+        }
+      ]
+    },
+    {
+      "id": "580",
+      "doc_number": "PO-1081",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-1814",
+          "description": "Drill bit set 29pc",
+          "unit_price": "60.47",
+          "qty": 15
+        },
+        {
+          "sku": "ILT-1020",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "34.45",
+          "qty": 5
+        },
+        {
+          "sku": "ILT-9106",
+          "description": "Copy paper, letter, 10 reams",
+          "unit_price": "208.12",
+          "qty": 51
+        }
+      ]
+    },
+    {
+      "id": "581",
+      "doc_number": "PO-1082",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-4059",
+          "description": "Wire nuts assorted",
+          "unit_price": "104.20",
+          "qty": 11
+        },
+        {
+          "sku": "SLE-6561",
+          "description": "Corrugated boxes 18x12x12",
+          "unit_price": "114.01",
+          "qty": 24
+        },
+        {
+          "sku": "SLE-7210",
+          "description": "Drill bit set 29pc",
+          "unit_price": "193.68",
+          "qty": 40
+        },
+        {
+          "sku": "SLE-1032",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "12.21",
+          "qty": 59
+        }
+      ]
+    },
+    {
+      "id": "582",
+      "doc_number": "PO-1083",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-9277",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "204.09",
+          "qty": 13
+        },
+        {
+          "sku": "BGO-939",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "42.17",
+          "qty": 6
+        },
+        {
+          "sku": "BGO-2461",
+          "description": "Nitrile gloves, case",
+          "unit_price": "129.55",
+          "qty": 8
+        },
+        {
+          "sku": "BGO-1854",
+          "description": "Drill bit set 29pc",
+          "unit_price": "95.69",
+          "qty": 48
+        }
+      ]
+    },
+    {
+      "id": "583",
+      "doc_number": "PO-1084",
+      "vendor_id": "8",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "RFS-3561",
+          "description": "Pallet wrap 18in",
+          "unit_price": "117.45",
+          "qty": 3
+        },
+        {
+          "sku": "RFS-483",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "172.26",
+          "qty": 40
+        },
+        {
+          "sku": "RFS-2084",
+          "description": "Wire nuts assorted",
+          "unit_price": "205.03",
+          "qty": 12
+        }
+      ]
+    },
+    {
+      "id": "584",
+      "doc_number": "PO-1085",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-2520",
+          "description": "Breaker 20A",
+          "unit_price": "35.82",
+          "qty": 41
+        }
+      ]
+    },
+    {
+      "id": "585",
+      "doc_number": "PO-1086",
+      "vendor_id": "4",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "SLE-6561",
+          "description": "Corrugated boxes 18x12x12",
+          "unit_price": "114.01",
+          "qty": 42
+        },
+        {
+          "sku": "SLE-1032",
+          "description": "Shipping labels 4x6 (500)",
+          "unit_price": "12.21",
+          "qty": 23
+        },
+        {
+          "sku": "SLE-8863",
+          "description": "Hex bolts M8 (box of 100)",
+          "unit_price": "63.33",
+          "qty": 55
+        },
+        {
+          "sku": "SLE-2520",
+          "description": "Breaker 20A",
+          "unit_price": "35.82",
+          "qty": 33
+        }
+      ]
+    },
+    {
+      "id": "586",
+      "doc_number": "PO-1087",
+      "vendor_id": "2",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BGO-2610",
+          "description": "Wire nuts assorted",
+          "unit_price": "190.14",
+          "qty": 36
+        }
+      ]
+    },
+    {
+      "id": "587",
+      "doc_number": "PO-1088",
+      "vendor_id": "3",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "CRP-5619",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "162.69",
+          "qty": 11
+        },
+        {
+          "sku": "CRP-9341",
+          "description": "Cable ties 11in (1000)",
+          "unit_price": "184.62",
+          "qty": 9
+        }
+      ]
+    },
+    {
+      "id": "588",
+      "doc_number": "PO-1089",
+      "vendor_id": "6",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "BWJ-5821",
+          "description": "Cordless drill 20V",
+          "unit_price": "53.17",
+          "qty": 33
+        },
+        {
+          "sku": "BWJ-4470",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "78.76",
+          "qty": 54
+        },
+        {
+          "sku": "BWJ-9602",
+          "description": "Pipette tips 200uL (rack)",
+          "unit_price": "200.49",
+          "qty": 59
+        }
+      ]
+    },
+    {
+      "id": "589",
+      "doc_number": "PO-1090",
+      "vendor_id": "5",
+      "status": "Open",
+      "txn_date": "2026-09-15",
+      "lines": [
+        {
+          "sku": "ILT-7488",
+          "description": "Floor cleaner concentrate 5 gal",
+          "unit_price": "6.82",
+          "qty": 42
+        },
+        {
+          "sku": "ILT-3319",
+          "description": "LED panel 2x4 40W",
+          "unit_price": "177.27",
+          "qty": 27
+        },
+        {
+          "sku": "ILT-1814",
+          "description": "Drill bit set 29pc",
+          "unit_price": "60.47",
+          "qty": 21
+        }
+      ]
+    }
+  ],
+  "receipts": [
+    {
+      "po_number": "PO-1001",
+      "sku": "SLE-8863",
+      "qty_received": 18,
+      "received_date": "2026-10-20"
+    },
+    {
+      "po_number": "PO-1001",
+      "sku": "SLE-4059",
+      "qty_received": 22,
+      "received_date": "2026-10-24"
+    },
+    {
+      "po_number": "PO-1001",
+      "sku": "SLE-2520",
+      "qty_received": 51,
+      "received_date": "2026-10-04"
+    },
+    {
+      "po_number": "PO-1001",
+      "sku": "SLE-7210",
+      "qty_received": 22,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1002",
+      "sku": "KLS-3242",
+      "qty_received": 4,
+      "received_date": "2026-10-27"
+    },
+    {
+      "po_number": "PO-1003",
+      "sku": "BWJ-7491",
+      "qty_received": 41,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1003",
+      "sku": "BWJ-6726",
+      "qty_received": 1,
+      "received_date": "2026-10-01"
+    },
+    {
+      "po_number": "PO-1003",
+      "sku": "BWJ-9602",
+      "qty_received": 46,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1003",
+      "sku": "BWJ-5821",
+      "qty_received": 9,
+      "received_date": "2026-10-27"
+    },
+    {
+      "po_number": "PO-1004",
+      "sku": "BWJ-7491",
+      "qty_received": 13,
+      "received_date": "2026-10-03"
+    },
+    {
+      "po_number": "PO-1005",
+      "sku": "HPF-3512",
+      "qty_received": 49,
+      "received_date": "2026-10-03"
+    },
+    {
+      "po_number": "PO-1005",
+      "sku": "HPF-3660",
+      "qty_received": 38,
+      "received_date": "2026-10-24"
+    },
+    {
+      "po_number": "PO-1006",
+      "sku": "CRP-4945",
+      "qty_received": 34,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1006",
+      "sku": "CRP-9880",
+      "qty_received": 39,
+      "received_date": "2026-10-22"
+    },
+    {
+      "po_number": "PO-1007",
+      "sku": "BGO-1680",
+      "qty_received": 43,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1007",
+      "sku": "BGO-9277",
+      "qty_received": 4,
+      "received_date": "2026-10-10"
+    },
+    {
+      "po_number": "PO-1008",
+      "sku": "ILT-9000",
+      "qty_received": 52,
+      "received_date": "2026-10-25"
+    },
+    {
+      "po_number": "PO-1009",
+      "sku": "BGO-939",
+      "qty_received": 3,
+      "received_date": "2026-10-03"
+    },
+    {
+      "po_number": "PO-1010",
+      "sku": "CRP-2652",
+      "qty_received": 6,
+      "received_date": "2026-10-01"
+    },
+    {
+      "po_number": "PO-1010",
+      "sku": "CRP-9341",
+      "qty_received": 15,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1010",
+      "sku": "CRP-4945",
+      "qty_received": 33,
+      "received_date": "2026-10-28"
+    },
+    {
+      "po_number": "PO-1010",
+      "sku": "CRP-5619",
+      "qty_received": 46,
+      "received_date": "2026-10-17"
+    },
+    {
+      "po_number": "PO-1011",
+      "sku": "CRP-5619",
+      "qty_received": 44,
+      "received_date": "2026-10-24"
+    },
+    {
+      "po_number": "PO-1011",
+      "sku": "CRP-9341",
+      "qty_received": 46,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1011",
+      "sku": "CRP-9880",
+      "qty_received": 6,
+      "received_date": "2026-10-18"
+    },
+    {
+      "po_number": "PO-1012",
+      "sku": "SLE-4059",
+      "qty_received": 34,
+      "received_date": "2026-10-28"
+    },
+    {
+      "po_number": "PO-1013",
+      "sku": "CRP-2652",
+      "qty_received": 59,
+      "received_date": "2026-10-04"
+    },
+    {
+      "po_number": "PO-1013",
+      "sku": "CRP-9880",
+      "qty_received": 14,
+      "received_date": "2026-10-08"
+    },
+    {
+      "po_number": "PO-1014",
+      "sku": "RFS-8936",
+      "qty_received": 43,
+      "received_date": "2026-10-20"
+    },
+    {
+      "po_number": "PO-1014",
+      "sku": "RFS-483",
+      "qty_received": 60,
+      "received_date": "2026-10-18"
+    },
+    {
+      "po_number": "PO-1015",
+      "sku": "BGO-2461",
+      "qty_received": 52,
+      "received_date": "2026-10-12"
+    },
+    {
+      "po_number": "PO-1015",
+      "sku": "BGO-939",
+      "qty_received": 39,
+      "received_date": "2026-10-15"
+    },
+    {
+      "po_number": "PO-1016",
+      "sku": "RFS-2084",
+      "qty_received": 19,
+      "received_date": "2026-10-05"
+    },
+    {
+      "po_number": "PO-1016",
+      "sku": "RFS-483",
+      "qty_received": 39,
+      "received_date": "2026-10-09"
+    },
+    {
+      "po_number": "PO-1016",
+      "sku": "RFS-3815",
+      "qty_received": 9,
+      "received_date": "2026-10-16"
+    },
+    {
+      "po_number": "PO-1016",
+      "sku": "RFS-8497",
+      "qty_received": 13,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1017",
+      "sku": "KLS-2484",
+      "qty_received": 26,
+      "received_date": "2026-10-16"
+    },
+    {
+      "po_number": "PO-1017",
+      "sku": "KLS-8798",
+      "qty_received": 50,
+      "received_date": "2026-10-09"
+    },
+    {
+      "po_number": "PO-1017",
+      "sku": "KLS-3242",
+      "qty_received": 55,
+      "received_date": "2026-10-24"
+    },
+    {
+      "po_number": "PO-1018",
+      "sku": "KLS-7879",
+      "qty_received": 22,
+      "received_date": "2026-10-31"
+    },
+    {
+      "po_number": "PO-1019",
+      "sku": "BGO-1680",
+      "qty_received": 2,
+      "received_date": "2026-10-29"
+    },
+    {
+      "po_number": "PO-1019",
+      "sku": "BGO-2610",
+      "qty_received": 35,
+      "received_date": "2026-10-19"
+    },
+    {
+      "po_number": "PO-1019",
+      "sku": "BGO-9277",
+      "qty_received": 34,
+      "received_date": "2026-10-10"
+    },
+    {
+      "po_number": "PO-1020",
+      "sku": "HPF-3438",
+      "qty_received": 10,
+      "received_date": "2026-10-02"
+    },
+    {
+      "po_number": "PO-1020",
+      "sku": "HPF-8204",
+      "qty_received": 60,
+      "received_date": "2026-10-27"
+    },
+    {
+      "po_number": "PO-1020",
+      "sku": "HPF-3512",
+      "qty_received": 2,
+      "received_date": "2026-10-12"
+    },
+    {
+      "po_number": "PO-1020",
+      "sku": "HPF-3660",
+      "qty_received": 25,
+      "received_date": "2026-10-22"
+    },
+    {
+      "po_number": "PO-1021",
+      "sku": "BGO-2610",
+      "qty_received": 50,
+      "received_date": "2026-10-09"
+    },
+    {
+      "po_number": "PO-1021",
+      "sku": "BGO-1680",
+      "qty_received": 60,
+      "received_date": "2026-10-17"
+    },
+    {
+      "po_number": "PO-1022",
+      "sku": "CRP-9880",
+      "qty_received": 17,
+      "received_date": "2026-10-27"
+    },
+    {
+      "po_number": "PO-1023",
+      "sku": "BWJ-6985",
+      "qty_received": 12,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1023",
+      "sku": "BWJ-5821",
+      "qty_received": 35,
+      "received_date": "2026-10-25"
+    },
+    {
+      "po_number": "PO-1023",
+      "sku": "BWJ-6726",
+      "qty_received": 56,
+      "received_date": "2026-10-17"
+    },
+    {
+      "po_number": "PO-1024",
+      "sku": "KLS-2886",
+      "qty_received": 12,
+      "received_date": "2026-10-04"
+    },
+    {
+      "po_number": "PO-1025",
+      "sku": "ILT-1020",
+      "qty_received": 11,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1025",
+      "sku": "ILT-9000",
+      "qty_received": 9,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1026",
+      "sku": "CRP-9880",
+      "qty_received": 49,
+      "received_date": "2026-10-16"
+    },
+    {
+      "po_number": "PO-1026",
+      "sku": "CRP-2652",
+      "qty_received": 31,
+      "received_date": "2026-10-07"
+    },
+    {
+      "po_number": "PO-1026",
+      "sku": "CRP-5962",
+      "qty_received": 3,
+      "received_date": "2026-10-17"
+    },
+    {
+      "po_number": "PO-1026",
+      "sku": "CRP-4945",
+      "qty_received": 13,
+      "received_date": "2026-10-20"
+    },
+    {
+      "po_number": "PO-1027",
+      "sku": "HPF-9007",
+      "qty_received": 10,
+      "received_date": "2026-10-14"
+    },
+    {
+      "po_number": "PO-1027",
+      "sku": "HPF-8204",
+      "qty_received": 33,
+      "received_date": "2026-10-14"
+    },
+    {
+      "po_number": "PO-1027",
+      "sku": "HPF-3438",
+      "qty_received": 15,
+      "received_date": "2026-10-28"
+    },
+    {
+      "po_number": "PO-1027",
+      "sku": "HPF-3660",
+      "qty_received": 19,
+      "received_date": "2026-10-29"
+    },
+    {
+      "po_number": "PO-1028",
+      "sku": "RFS-3815",
+      "qty_received": 2,
+      "received_date": "2026-10-20"
+    },
+    {
+      "po_number": "PO-1028",
+      "sku": "RFS-483",
+      "qty_received": 3,
+      "received_date": "2026-10-12"
+    },
+    {
+      "po_number": "PO-1029",
+      "sku": "HPF-396",
+      "qty_received": 45,
+      "received_date": "2026-10-07"
+    },
+    {
+      "po_number": "PO-1030",
+      "sku": "ILT-7488",
+      "qty_received": 11,
+      "received_date": "2026-10-07"
+    },
+    {
+      "po_number": "PO-1030",
+      "sku": "ILT-3319",
+      "qty_received": 13,
+      "received_date": "2026-10-27"
+    },
+    {
+      "po_number": "PO-1030",
+      "sku": "ILT-9106",
+      "qty_received": 20,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1030",
+      "sku": "ILT-1814",
+      "qty_received": 35,
+      "received_date": "2026-10-24"
+    },
+    {
+      "po_number": "PO-1031",
+      "sku": "KLS-3242",
+      "qty_received": 55,
+      "received_date": "2026-10-27"
+    },
+    {
+      "po_number": "PO-1031",
+      "sku": "KLS-2484",
+      "qty_received": 14,
+      "received_date": "2026-10-27"
+    },
+    {
+      "po_number": "PO-1031",
+      "sku": "KLS-2513",
+      "qty_received": 16,
+      "received_date": "2026-10-13"
+    },
+    {
+      "po_number": "PO-1031",
+      "sku": "KLS-2886",
+      "qty_received": 46,
+      "received_date": "2026-10-22"
+    },
+    {
+      "po_number": "PO-1032",
+      "sku": "HPF-396",
+      "qty_received": 35,
+      "received_date": "2026-10-18"
+    },
+    {
+      "po_number": "PO-1032",
+      "sku": "HPF-3660",
+      "qty_received": 27,
+      "received_date": "2026-10-10"
+    },
+    {
+      "po_number": "PO-1032",
+      "sku": "HPF-3438",
+      "qty_received": 3,
+      "received_date": "2026-10-02"
+    },
+    {
+      "po_number": "PO-1033",
+      "sku": "ILT-9000",
+      "qty_received": 20,
+      "received_date": "2026-10-12"
+    },
+    {
+      "po_number": "PO-1033",
+      "sku": "ILT-1814",
+      "qty_received": 32,
+      "received_date": "2026-10-26"
+    },
+    {
+      "po_number": "PO-1033",
+      "sku": "ILT-9106",
+      "qty_received": 22,
+      "received_date": "2026-10-05"
+    },
+    {
+      "po_number": "PO-1034",
+      "sku": "BWJ-9602",
+      "qty_received": 19,
+      "received_date": "2026-10-22"
+    },
+    {
+      "po_number": "PO-1035",
+      "sku": "SLE-1032",
+      "qty_received": 3,
+      "received_date": "2026-10-02"
+    },
+    {
+      "po_number": "PO-1035",
+      "sku": "SLE-6561",
+      "qty_received": 25,
+      "received_date": "2026-10-07"
+    },
+    {
+      "po_number": "PO-1035",
+      "sku": "SLE-8863",
+      "qty_received": 8,
+      "received_date": "2026-10-16"
+    },
+    {
+      "po_number": "PO-1036",
+      "sku": "HPF-3512",
+      "qty_received": 47,
+      "received_date": "2026-10-11"
+    },
+    {
+      "po_number": "PO-1037",
+      "sku": "CRP-9880",
+      "qty_received": 30,
+      "received_date": "2026-10-04"
+    },
+    {
+      "po_number": "PO-1037",
+      "sku": "CRP-5619",
+      "qty_received": 53,
+      "received_date": "2026-10-29"
+    },
+    {
+      "po_number": "PO-1037",
+      "sku": "CRP-9341",
+      "qty_received": 12,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1038",
+      "sku": "CRP-4945",
+      "qty_received": 7,
+      "received_date": "2026-10-04"
+    },
+    {
+      "po_number": "PO-1038",
+      "sku": "CRP-5962",
+      "qty_received": 23,
+      "received_date": "2026-10-15"
+    },
+    {
+      "po_number": "PO-1038",
+      "sku": "CRP-2652",
+      "qty_received": 18,
+      "received_date": "2026-10-14"
+    },
+    {
+      "po_number": "PO-1038",
+      "sku": "CRP-5619",
+      "qty_received": 8,
+      "received_date": "2026-10-14"
+    },
+    {
+      "po_number": "PO-1039",
+      "sku": "BWJ-7491",
+      "qty_received": 31,
+      "received_date": "2026-10-04"
+    },
+    {
+      "po_number": "PO-1039",
+      "sku": "BWJ-6985",
+      "qty_received": 22,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1039",
+      "sku": "BWJ-9602",
+      "qty_received": 5,
+      "received_date": "2026-10-01"
+    },
+    {
+      "po_number": "PO-1039",
+      "sku": "BWJ-4470",
+      "qty_received": 16,
+      "received_date": "2026-10-02"
+    },
+    {
+      "po_number": "PO-1040",
+      "sku": "CRP-5619",
+      "qty_received": 47,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1040",
+      "sku": "CRP-4945",
+      "qty_received": 55,
+      "received_date": "2026-10-01"
+    },
+    {
+      "po_number": "PO-1040",
+      "sku": "CRP-5962",
+      "qty_received": 2,
+      "received_date": "2026-10-09"
+    },
+    {
+      "po_number": "PO-1041",
+      "sku": "ILT-1814",
+      "qty_received": 14,
+      "received_date": "2026-10-05"
+    },
+    {
+      "po_number": "PO-1041",
+      "sku": "ILT-3319",
+      "qty_received": 13,
+      "received_date": "2026-10-13"
+    },
+    {
+      "po_number": "PO-1041",
+      "sku": "ILT-9106",
+      "qty_received": 23,
+      "received_date": "2026-10-21"
+    },
+    {
+      "po_number": "PO-1042",
+      "sku": "RFS-483",
+      "qty_received": 22,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1042",
+      "sku": "RFS-3561",
+      "qty_received": 8,
+      "received_date": "2026-10-13"
+    },
+    {
+      "po_number": "PO-1042",
+      "sku": "RFS-2084",
+      "qty_received": 9,
+      "received_date": "2026-10-27"
+    },
+    {
+      "po_number": "PO-1043",
+      "sku": "BWJ-9602",
+      "qty_received": 3,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1044",
+      "sku": "RFS-3815",
+      "qty_received": 29,
+      "received_date": "2026-10-11"
+    },
+    {
+      "po_number": "PO-1044",
+      "sku": "RFS-3561",
+      "qty_received": 13,
+      "received_date": "2026-10-18"
+    },
+    {
+      "po_number": "PO-1044",
+      "sku": "RFS-2084",
+      "qty_received": 24,
+      "received_date": "2026-10-02"
+    },
+    {
+      "po_number": "PO-1045",
+      "sku": "RFS-2084",
+      "qty_received": 39,
+      "received_date": "2026-10-08"
+    },
+    {
+      "po_number": "PO-1045",
+      "sku": "RFS-8497",
+      "qty_received": 38,
+      "received_date": "2026-10-28"
+    },
+    {
+      "po_number": "PO-1045",
+      "sku": "RFS-483",
+      "qty_received": 60,
+      "received_date": "2026-10-15"
+    },
+    {
+      "po_number": "PO-1046",
+      "sku": "BWJ-5821",
+      "qty_received": 20,
+      "received_date": "2026-10-12"
+    },
+    {
+      "po_number": "PO-1046",
+      "sku": "BWJ-4470",
+      "qty_received": 5,
+      "received_date": "2026-10-16"
+    },
+    {
+      "po_number": "PO-1046",
+      "sku": "BWJ-9602",
+      "qty_received": 5,
+      "received_date": "2026-10-25"
+    },
+    {
+      "po_number": "PO-1047",
+      "sku": "HPF-3438",
+      "qty_received": 9,
+      "received_date": "2026-10-21"
+    },
+    {
+      "po_number": "PO-1047",
+      "sku": "HPF-8204",
+      "qty_received": 41,
+      "received_date": "2026-10-20"
+    },
+    {
+      "po_number": "PO-1047",
+      "sku": "HPF-9007",
+      "qty_received": 6,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1048",
+      "sku": "RFS-2084",
+      "qty_received": 36,
+      "received_date": "2026-10-20"
+    },
+    {
+      "po_number": "PO-1049",
+      "sku": "CRP-4945",
+      "qty_received": 30,
+      "received_date": "2026-10-01"
+    },
+    {
+      "po_number": "PO-1049",
+      "sku": "CRP-9880",
+      "qty_received": 60,
+      "received_date": "2026-10-27"
+    },
+    {
+      "po_number": "PO-1050",
+      "sku": "RFS-3561",
+      "qty_received": 14,
+      "received_date": "2026-10-22"
+    },
+    {
+      "po_number": "PO-1051",
+      "sku": "ILT-7488",
+      "qty_received": 37,
+      "received_date": "2026-10-15"
+    },
+    {
+      "po_number": "PO-1051",
+      "sku": "ILT-1814",
+      "qty_received": 10,
+      "received_date": "2026-10-24"
+    },
+    {
+      "po_number": "PO-1052",
+      "sku": "BGO-9277",
+      "qty_received": 31,
+      "received_date": "2026-10-10"
+    },
+    {
+      "po_number": "PO-1053",
+      "sku": "CRP-2652",
+      "qty_received": 29,
+      "received_date": "2026-10-17"
+    },
+    {
+      "po_number": "PO-1054",
+      "sku": "BGO-1680",
+      "qty_received": 8,
+      "received_date": "2026-10-03"
+    },
+    {
+      "po_number": "PO-1054",
+      "sku": "BGO-939",
+      "qty_received": 60,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1054",
+      "sku": "BGO-1854",
+      "qty_received": 41,
+      "received_date": "2026-10-05"
+    },
+    {
+      "po_number": "PO-1054",
+      "sku": "BGO-2610",
+      "qty_received": 34,
+      "received_date": "2026-10-12"
+    },
+    {
+      "po_number": "PO-1055",
+      "sku": "CRP-5619",
+      "qty_received": 21,
+      "received_date": "2026-10-31"
+    },
+    {
+      "po_number": "PO-1056",
+      "sku": "KLS-7879",
+      "qty_received": 23,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1056",
+      "sku": "KLS-2886",
+      "qty_received": 51,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1056",
+      "sku": "KLS-3242",
+      "qty_received": 11,
+      "received_date": "2026-10-18"
+    },
+    {
+      "po_number": "PO-1056",
+      "sku": "KLS-2484",
+      "qty_received": 18,
+      "received_date": "2026-10-13"
+    },
+    {
+      "po_number": "PO-1057",
+      "sku": "SLE-1032",
+      "qty_received": 51,
+      "received_date": "2026-10-14"
+    },
+    {
+      "po_number": "PO-1057",
+      "sku": "SLE-7210",
+      "qty_received": 50,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1058",
+      "sku": "BWJ-6726",
+      "qty_received": 57,
+      "received_date": "2026-10-15"
+    },
+    {
+      "po_number": "PO-1059",
+      "sku": "CRP-9341",
+      "qty_received": 7,
+      "received_date": "2026-10-02"
+    },
+    {
+      "po_number": "PO-1059",
+      "sku": "CRP-4945",
+      "qty_received": 45,
+      "received_date": "2026-10-26"
+    },
+    {
+      "po_number": "PO-1059",
+      "sku": "CRP-5962",
+      "qty_received": 8,
+      "received_date": "2026-10-04"
+    },
+    {
+      "po_number": "PO-1060",
+      "sku": "ILT-1020",
+      "qty_received": 27,
+      "received_date": "2026-10-04"
+    },
+    {
+      "po_number": "PO-1060",
+      "sku": "ILT-7488",
+      "qty_received": 47,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1060",
+      "sku": "ILT-9000",
+      "qty_received": 13,
+      "received_date": "2026-10-02"
+    },
+    {
+      "po_number": "PO-1061",
+      "sku": "RFS-483",
+      "qty_received": 56,
+      "received_date": "2026-10-11"
+    },
+    {
+      "po_number": "PO-1062",
+      "sku": "ILT-9000",
+      "qty_received": 24,
+      "received_date": "2026-10-10"
+    },
+    {
+      "po_number": "PO-1062",
+      "sku": "ILT-7488",
+      "qty_received": 19,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1062",
+      "sku": "ILT-9106",
+      "qty_received": 54,
+      "received_date": "2026-10-19"
+    },
+    {
+      "po_number": "PO-1063",
+      "sku": "ILT-9106",
+      "qty_received": 9,
+      "received_date": "2026-10-13"
+    },
+    {
+      "po_number": "PO-1063",
+      "sku": "ILT-7488",
+      "qty_received": 41,
+      "received_date": "2026-10-07"
+    },
+    {
+      "po_number": "PO-1064",
+      "sku": "SLE-8863",
+      "qty_received": 28,
+      "received_date": "2026-10-10"
+    },
+    {
+      "po_number": "PO-1064",
+      "sku": "SLE-6561",
+      "qty_received": 57,
+      "received_date": "2026-10-21"
+    },
+    {
+      "po_number": "PO-1065",
+      "sku": "ILT-9000",
+      "qty_received": 23,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1065",
+      "sku": "ILT-3319",
+      "qty_received": 12,
+      "received_date": "2026-10-25"
+    },
+    {
+      "po_number": "PO-1065",
+      "sku": "ILT-1020",
+      "qty_received": 6,
+      "received_date": "2026-10-18"
+    },
+    {
+      "po_number": "PO-1066",
+      "sku": "KLS-2886",
+      "qty_received": 22,
+      "received_date": "2026-10-13"
+    },
+    {
+      "po_number": "PO-1066",
+      "sku": "KLS-3242",
+      "qty_received": 47,
+      "received_date": "2026-10-07"
+    },
+    {
+      "po_number": "PO-1066",
+      "sku": "KLS-2484",
+      "qty_received": 29,
+      "received_date": "2026-10-02"
+    },
+    {
+      "po_number": "PO-1067",
+      "sku": "KLS-3242",
+      "qty_received": 5,
+      "received_date": "2026-10-13"
+    },
+    {
+      "po_number": "PO-1067",
+      "sku": "KLS-2513",
+      "qty_received": 11,
+      "received_date": "2026-10-10"
+    },
+    {
+      "po_number": "PO-1067",
+      "sku": "KLS-2886",
+      "qty_received": 14,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1068",
+      "sku": "CRP-5962",
+      "qty_received": 8,
+      "received_date": "2026-10-26"
+    },
+    {
+      "po_number": "PO-1068",
+      "sku": "CRP-9341",
+      "qty_received": 1,
+      "received_date": "2026-10-08"
+    },
+    {
+      "po_number": "PO-1069",
+      "sku": "SLE-1032",
+      "qty_received": 9,
+      "received_date": "2026-10-15"
+    },
+    {
+      "po_number": "PO-1069",
+      "sku": "SLE-4059",
+      "qty_received": 1,
+      "received_date": "2026-10-25"
+    },
+    {
+      "po_number": "PO-1070",
+      "sku": "RFS-483",
+      "qty_received": 31,
+      "received_date": "2026-10-14"
+    },
+    {
+      "po_number": "PO-1070",
+      "sku": "RFS-3561",
+      "qty_received": 21,
+      "received_date": "2026-10-11"
+    },
+    {
+      "po_number": "PO-1070",
+      "sku": "RFS-8936",
+      "qty_received": 22,
+      "received_date": "2026-10-07"
+    },
+    {
+      "po_number": "PO-1071",
+      "sku": "SLE-1032",
+      "qty_received": 37,
+      "received_date": "2026-10-10"
+    },
+    {
+      "po_number": "PO-1071",
+      "sku": "SLE-7210",
+      "qty_received": 56,
+      "received_date": "2026-10-19"
+    },
+    {
+      "po_number": "PO-1071",
+      "sku": "SLE-2520",
+      "qty_received": 19,
+      "received_date": "2026-10-12"
+    },
+    {
+      "po_number": "PO-1072",
+      "sku": "RFS-483",
+      "qty_received": 17,
+      "received_date": "2026-10-18"
+    },
+    {
+      "po_number": "PO-1072",
+      "sku": "RFS-8936",
+      "qty_received": 9,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1073",
+      "sku": "CRP-9341",
+      "qty_received": 28,
+      "received_date": "2026-10-28"
+    },
+    {
+      "po_number": "PO-1073",
+      "sku": "CRP-4945",
+      "qty_received": 1,
+      "received_date": "2026-10-10"
+    },
+    {
+      "po_number": "PO-1074",
+      "sku": "KLS-2484",
+      "qty_received": 22,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1074",
+      "sku": "KLS-2513",
+      "qty_received": 55,
+      "received_date": "2026-10-29"
+    },
+    {
+      "po_number": "PO-1075",
+      "sku": "RFS-2084",
+      "qty_received": 1,
+      "received_date": "2026-10-05"
+    },
+    {
+      "po_number": "PO-1075",
+      "sku": "RFS-3815",
+      "qty_received": 56,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1075",
+      "sku": "RFS-8936",
+      "qty_received": 27,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1075",
+      "sku": "RFS-483",
+      "qty_received": 9,
+      "received_date": "2026-10-19"
+    },
+    {
+      "po_number": "PO-1076",
+      "sku": "KLS-7879",
+      "qty_received": 53,
+      "received_date": "2026-10-29"
+    },
+    {
+      "po_number": "PO-1076",
+      "sku": "KLS-2484",
+      "qty_received": 48,
+      "received_date": "2026-10-22"
+    },
+    {
+      "po_number": "PO-1076",
+      "sku": "KLS-8798",
+      "qty_received": 26,
+      "received_date": "2026-10-12"
+    },
+    {
+      "po_number": "PO-1077",
+      "sku": "HPF-396",
+      "qty_received": 32,
+      "received_date": "2026-10-22"
+    },
+    {
+      "po_number": "PO-1077",
+      "sku": "HPF-8204",
+      "qty_received": 17,
+      "received_date": "2026-10-08"
+    },
+    {
+      "po_number": "PO-1077",
+      "sku": "HPF-3512",
+      "qty_received": 15,
+      "received_date": "2026-10-28"
+    },
+    {
+      "po_number": "PO-1078",
+      "sku": "BGO-939",
+      "qty_received": 16,
+      "received_date": "2026-10-13"
+    },
+    {
+      "po_number": "PO-1079",
+      "sku": "SLE-1032",
+      "qty_received": 56,
+      "received_date": "2026-10-23"
+    },
+    {
+      "po_number": "PO-1079",
+      "sku": "SLE-7210",
+      "qty_received": 56,
+      "received_date": "2026-10-26"
+    },
+    {
+      "po_number": "PO-1079",
+      "sku": "SLE-8863",
+      "qty_received": 33,
+      "received_date": "2026-10-14"
+    },
+    {
+      "po_number": "PO-1080",
+      "sku": "HPF-8204",
+      "qty_received": 2,
+      "received_date": "2026-10-30"
+    },
+    {
+      "po_number": "PO-1080",
+      "sku": "HPF-3438",
+      "qty_received": 5,
+      "received_date": "2026-10-22"
+    },
+    {
+      "po_number": "PO-1080",
+      "sku": "HPF-3660",
+      "qty_received": 29,
+      "received_date": "2026-10-08"
+    },
+    {
+      "po_number": "PO-1081",
+      "sku": "ILT-1814",
+      "qty_received": 11,
+      "received_date": "2026-10-31"
+    },
+    {
+      "po_number": "PO-1081",
+      "sku": "ILT-1020",
+      "qty_received": 5,
+      "received_date": "2026-10-16"
+    },
+    {
+      "po_number": "PO-1081",
+      "sku": "ILT-9106",
+      "qty_received": 51,
+      "received_date": "2026-10-07"
+    },
+    {
+      "po_number": "PO-1082",
+      "sku": "SLE-4059",
+      "qty_received": 11,
+      "received_date": "2026-10-14"
+    },
+    {
+      "po_number": "PO-1082",
+      "sku": "SLE-6561",
+      "qty_received": 24,
+      "received_date": "2026-10-20"
+    },
+    {
+      "po_number": "PO-1082",
+      "sku": "SLE-7210",
+      "qty_received": 40,
+      "received_date": "2026-10-15"
+    },
+    {
+      "po_number": "PO-1082",
+      "sku": "SLE-1032",
+      "qty_received": 59,
+      "received_date": "2026-10-02"
+    },
+    {
+      "po_number": "PO-1083",
+      "sku": "BGO-9277",
+      "qty_received": 13,
+      "received_date": "2026-10-04"
+    },
+    {
+      "po_number": "PO-1083",
+      "sku": "BGO-939",
+      "qty_received": 6,
+      "received_date": "2026-10-26"
+    },
+    {
+      "po_number": "PO-1083",
+      "sku": "BGO-2461",
+      "qty_received": 6,
+      "received_date": "2026-10-05"
+    },
+    {
+      "po_number": "PO-1083",
+      "sku": "BGO-1854",
+      "qty_received": 48,
+      "received_date": "2026-10-15"
+    },
+    {
+      "po_number": "PO-1084",
+      "sku": "RFS-3561",
+      "qty_received": 3,
+      "received_date": "2026-10-28"
+    },
+    {
+      "po_number": "PO-1084",
+      "sku": "RFS-483",
+      "qty_received": 23,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1084",
+      "sku": "RFS-2084",
+      "qty_received": 12,
+      "received_date": "2026-10-15"
+    },
+    {
+      "po_number": "PO-1085",
+      "sku": "SLE-2520",
+      "qty_received": 41,
+      "received_date": "2026-10-29"
+    },
+    {
+      "po_number": "PO-1086",
+      "sku": "SLE-6561",
+      "qty_received": 1,
+      "received_date": "2026-10-13"
+    },
+    {
+      "po_number": "PO-1086",
+      "sku": "SLE-1032",
+      "qty_received": 23,
+      "received_date": "2026-10-19"
+    },
+    {
+      "po_number": "PO-1086",
+      "sku": "SLE-8863",
+      "qty_received": 55,
+      "received_date": "2026-10-16"
+    },
+    {
+      "po_number": "PO-1086",
+      "sku": "SLE-2520",
+      "qty_received": 33,
+      "received_date": "2026-10-19"
+    },
+    {
+      "po_number": "PO-1087",
+      "sku": "BGO-2610",
+      "qty_received": 36,
+      "received_date": "2026-10-03"
+    },
+    {
+      "po_number": "PO-1088",
+      "sku": "CRP-5619",
+      "qty_received": 11,
+      "received_date": "2026-10-08"
+    },
+    {
+      "po_number": "PO-1088",
+      "sku": "CRP-9341",
+      "qty_received": 9,
+      "received_date": "2026-10-21"
+    },
+    {
+      "po_number": "PO-1089",
+      "sku": "BWJ-5821",
+      "qty_received": 8,
+      "received_date": "2026-10-06"
+    },
+    {
+      "po_number": "PO-1089",
+      "sku": "BWJ-4470",
+      "qty_received": 52,
+      "received_date": "2026-10-16"
+    },
+    {
+      "po_number": "PO-1089",
+      "sku": "BWJ-9602",
+      "qty_received": 59,
+      "received_date": "2026-10-09"
+    },
+    {
+      "po_number": "PO-1090",
+      "sku": "ILT-7488",
+      "qty_received": 42,
+      "received_date": "2026-10-19"
+    },
+    {
+      "po_number": "PO-1090",
+      "sku": "ILT-3319",
+      "qty_received": 27,
+      "received_date": "2026-10-14"
+    },
+    {
+      "po_number": "PO-1090",
+      "sku": "ILT-1814",
+      "qty_received": 21,
+      "received_date": "2026-10-21"
+    }
+  ],
+  "bills": [
+    {
+      "id": "H0001",
+      "vendor_id": "4",
+      "doc_number": "INV-60393",
+      "txn_date": "2026-09-20",
+      "due_date": "2026-10-20",
+      "total": "9520.12",
+      "balance": "0.00",
+      "po_number": "PO-1001",
+      "memo": "sample history",
+      "lines": []
+    },
+    {
+      "id": "H0002",
+      "vendor_id": "5",
+      "doc_number": "INV-3500",
+      "txn_date": "2026-09-20",
+      "due_date": "2026-10-20",
+      "total": "1153.76",
+      "balance": "0.00",
+      "po_number": "PO-1025",
+      "memo": "sample history",
+      "lines": []
+    },
+    {
+      "id": "H0003",
+      "vendor_id": "2",
+      "doc_number": "BL62399",
+      "txn_date": "2026-09-20",
+      "due_date": "2026-10-20",
+      "total": "2890.25",
+      "balance": "0.00",
+      "po_number": "PO-1007",
+      "memo": "sample history",
+      "lines": []
+    },
+    {
+      "id": "H0004",
+      "vendor_id": "8",
+      "doc_number": "INV-85736",
+      "txn_date": "2026-09-20",
+      "due_date": "2026-10-20",
+      "total": "4264.47",
+      "balance": "0.00",
+      "po_number": "PO-1072",
+      "memo": "sample history",
+      "lines": []
+    },
+    {
+      "id": "H0005",
+      "vendor_id": "7",
+      "doc_number": "69333",
+      "txn_date": "2026-09-20",
+      "due_date": "2026-10-20",
+      "total": "20116.45",
+      "balance": "0.00",
+      "po_number": "PO-1017",
+      "memo": "sample history",
+      "lines": []
+    }
+  ],
+  "payments": []
+}

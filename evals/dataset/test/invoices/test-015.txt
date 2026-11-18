@@ -1,0 +1,16 @@
+From: Morgan Chu <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice INV-93741 from Keystone Lab Supply
+
+Hi team,
+
+Please find our invoice below for Customer PO: 1018.
+
+- Hex bolts M8 (box of 100), item KLS-7879: 22 units at $182.77 each ($4,020.94)
+
+Amount due: 4,020.94 USD, payable by December 9, 2026.
+Invoice date: 10 Oct 2026
+
+Thanks,
+Morgan Chu
+Keystone Lab Supply

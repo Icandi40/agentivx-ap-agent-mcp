@@ -1,0 +1,21 @@
+{
+  "label": "SAMPLE ASSUMPTIONS for illustration only. Not measured at any client. Replace with a real Process X-Ray baseline before quoting any result.",
+  "monthly_invoices": 400,
+  "before": {
+    "steps": [
+      {"step": "Open and read the invoice", "touch_min": 2},
+      {"step": "Key the bill into QuickBooks", "touch_min": 6},
+      {"step": "Find the PO and compare lines", "touch_min": 5},
+      {"step": "Check the receiving log", "touch_min": 4},
+      {"step": "Route for approval and follow up", "touch_min": 3}
+    ],
+    "wait_days": {"Intake backlog": 1.5, "Approval queue": 3.0}
+  },
+  "after": {
+    "steps": [
+      {"step": "Review a clean proposal card and approve", "touch_min": 1.5, "applies_to": "clean"},
+      {"step": "Investigate a flagged invoice and decide", "touch_min": 8, "applies_to": "held"}
+    ],
+    "wait_days": {"Intake backlog": 0.0, "Approval queue": 1.0}
+  }
+}

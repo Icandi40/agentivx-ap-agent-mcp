@@ -1,0 +1,19 @@
+Redfern Freight Services
+1402 Commerce Way, Suite 283
+Remit to: PO Box 747, Sample City, ST 10179
+Phone (555) 012-4810
+
+INVOICE
+Invoice #: RE32282
+Invoice Date: 30 Oct 2026
+Due Date: 2026-11-29
+Purchase Order: PO-1029
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+RFS-6149 | Toner cartridge, black | 44 | $209.82 | $9,232.08
+RFS-3922 | Hex bolts M8 (box of 100) | 44 | $108.24 | $4,762.56
+
+Subtotal: $13,994.64
+Total Due: $13,994.64
+Thank you for 12 years of business. Terms: Net 30.

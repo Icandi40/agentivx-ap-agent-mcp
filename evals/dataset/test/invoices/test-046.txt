@@ -1,0 +1,17 @@
+From: Dana Ruiz <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice RE89298 from REDFERN FREIGHT SERVICES
+
+Hi team,
+
+Please find our invoice below for Purchase Order: PO-8553.
+
+- Mop heads (12), item RFS-8497: 18 units at $93.79 each ($1,688.22)
+- Pallet wrap 18in, item RFS-3561: 20 units at $117.45 each ($2,349.00)
+
+Amount due: 4,037.22 USD, payable by 11/13/2026.
+Invoice date: October 14, 2026
+
+Thanks,
+Dana Ruiz
+REDFERN FREIGHT SERVICES

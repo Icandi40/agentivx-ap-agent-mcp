@@ -1,0 +1,19 @@
+Summit Line Electrical Inc.
+2335 Commerce Way, Suite 213
+Remit to: PO Box 949, Sample City, ST 17882
+Phone (555) 012-7444
+
+INVOICE
+Invoice #: 96990
+Invoice Date: Oct 10, 2026
+Due Date: November 9, 2026
+PO Number: PO-8497
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+SLE-1299 | LED panel 2x4 40W | 5 | $114.09 | $570.45
+SLE-2802 | Toner cartridge, black | 10 | $35.98 | $359.80
+
+Subtotal: $930.25
+Total Due: $930.25
+Thank you for 12 years of business. Terms: Net 30.

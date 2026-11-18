@@ -1,0 +1,17 @@
+From: Morgan Chu <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice 74320 from Brightwater Janitorial
+
+Hi team,
+
+Please find our invoice below for Purchase Order: PO-1058.
+
+- Safety glasses, item BWJ-6726: 57 units at $154.55 each ($8,809.35)
+- Restocking fee, item ADJ-894: 1 units at $86.66 each ($86.66)
+
+Amount due: $8,896.01, payable by November 18, 2026.
+Invoice date: 19 Oct 2026
+
+Thanks,
+Morgan Chu
+Brightwater Janitorial

@@ -1,0 +1,17 @@
+From: Morgan Chu <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice 38892 from Cedar Ridge Packaging Co.
+
+Hi team,
+
+Please find our invoice below for PO Number: PO-1088.
+
+- LED panel 2x4 40W, item CRP-5619: 11 units at $162.69 each ($1,789.59)
+- Cable ties 11in (1000), item CRP-9341: 9 units at $184.62 each ($1,661.58)
+
+Amount due: $3,451.17, payable by 29 Nov 2026.
+Invoice date: 2026-10-15
+
+Thanks,
+Morgan Chu
+Cedar Ridge Packaging Co.

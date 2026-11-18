@@ -1,0 +1,18 @@
+From: Dana Ruiz <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice RE63083 from Redfern Freight Services
+
+Hi team,
+
+Please find our invoice below for Your PO PO-1044.
+
+- Floor cleaner concentrate 5 gal, item RFS-3815: 29 units at $199.05 each ($5,772.45)
+- Pallet wrap 18in, item RFS-3561: 13 units at $117.45 each ($1,526.85)
+- Wire nuts assorted, item RFS-2084: 24 units at $205.03 each ($4,920.72)
+
+Amount due: $12,220.02, payable by Nov 20, 2026.
+Invoice date: Oct 21, 2026
+
+Thanks,
+Dana Ruiz
+Redfern Freight Services

@@ -1,0 +1,19 @@
+From: Priya Natarajan <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice INV-38894 from HARBOR POINT FASTENERS
+
+Hi team,
+
+Please find our invoice below for PO Number: PO-1016.
+
+- Wire nuts assorted, item RFS-2084: 19 units at $205.03 each ($3,895.57)
+- LED panel 2x4 40W, item RFS-483: 39 units at $172.26 each ($6,718.14)
+- Floor cleaner concentrate 5 gal, item RFS-3815: 9 units at $199.05 each ($1,791.45)
+- Mop heads (12), item RFS-8497: 13 units at $93.79 each ($1,219.27)
+
+Amount due: $13,624.43, payable by 11/22/2026.
+Invoice date: Oct 23, 2026
+
+Thanks,
+Priya Natarajan
+HARBOR POINT FASTENERS

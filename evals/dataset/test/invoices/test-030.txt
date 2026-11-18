@@ -1,0 +1,16 @@
+From: Lee Okafor <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice IR30343 from Ironleaf Tools Inc.
+
+Hi team,
+
+Please find our invoice below for Your PO PO-1008.
+
+- Wire nuts assorted, item ILT-9000: 52 units at $92.52 each ($4,811.04)
+
+Amount due: $4,811.04, payable by Nov 20, 2026.
+Invoice date: 2026-11-05
+
+Thanks,
+Lee Okafor
+Ironleaf Tools Inc.

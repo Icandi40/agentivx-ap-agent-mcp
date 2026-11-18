@@ -1,0 +1,21 @@
+Keystone Lab Supply
+6672 Commerce Way, Suite 150
+Remit to: PO Box 972, Sample City, ST 84870
+Phone (555) 011-6562
+
+INVOICE
+Invoice #: INV-84456
+Invoice Date: October 9, 2026
+Due Date: Dec 8, 2026
+Purchase Order: PO-1031
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+KLS-3242 | Wire nuts assorted | 55 | $173.27 | $9,529.85
+KLS-2484 | Mop heads (12) | 14 | $61.85 | $865.90
+KLS-2513 | Shipping labels 4x6 (500) | 16 | $124.27 | $1,988.32
+KLS-2886 | Mop heads (12) | 46 | $61.47 | $2,827.62
+
+Subtotal: $15,211.69
+Total Due: $15,211.69
+Thank you for 12 years of business. Terms: Net 60.

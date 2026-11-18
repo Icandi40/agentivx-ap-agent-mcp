@@ -1,0 +1,17 @@
+From: Priya Natarajan <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice KE72464 from Keystone Lab Supply, Inc.
+
+Hi team,
+
+Please find our invoice below for Customer PO: 1002.
+
+- Wire nuts assorted, item KLS-3242: 4 units at $173.27 each ($693.08)
+- Rush handling fee, item ADJ-336: 1 units at $121.42 each ($121.42)
+
+Amount due: 814.50 USD, payable by December 10, 2026.
+Invoice date: Oct 11, 2026
+
+Thanks,
+Priya Natarajan
+Keystone Lab Supply, Inc.

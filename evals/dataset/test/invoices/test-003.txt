@@ -1,0 +1,17 @@
+From: Sam Whitfield <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice INV-92224 from Cedar Ridge Packaging Co.
+
+Hi team,
+
+Please find our invoice below for Purchase Order: PO-1073.
+
+- Cable ties 11in (1000), item CRP-9341: 28 units at $184.62 each ($5,169.36)
+- Toner cartridge, black, item CRP-4945: 1 units at $132.45 each ($132.45)
+
+Amount due: $5,301.81, payable by 08 Dec 2026.
+Invoice date: 2026-10-24
+
+Thanks,
+Sam Whitfield
+Cedar Ridge Packaging Co.

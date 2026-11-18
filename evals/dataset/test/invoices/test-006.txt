@@ -1,0 +1,20 @@
+Redfern Freight Services
+1214 Commerce Way, Suite 393
+Remit to: PO Box 3978, Sample City, ST 61734
+Phone (555) 015-8779
+
+INVOICE
+Invoice #: 68198
+Invoice Date: Nov 9, 2026
+Due Date: December 9, 2026
+Purchase Order: PO-1045
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+RFS-2084 | Wire nuts assorted | 39 | $205.03 | $7,996.17
+RFS-8497 | Mop heads (12) | 38 | $93.79 | $3,564.02
+RFS-483 | LED panel 2x4 40W | 60 | $172.26 | $10,335.60
+
+Subtotal: $21,895.79
+Total Due: $21,895.79
+Thank you for 12 years of business. Terms: Net 30.

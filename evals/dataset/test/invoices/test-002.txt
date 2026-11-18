@@ -1,0 +1,19 @@
+From: Sam Whitfield <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice HA5705 from HARBOR POINT FASTENERS
+
+Hi team,
+
+Please find our invoice below for Your PO PO-1020.
+
+- Toner cartridge, black, item HPF-3438: 10 units at $19.15 each ($191.50)
+- Mop heads (12), item HPF-8204: 60 units at $155.27 each ($9,316.20)
+- Cable ties 11in (1000), item HPF-3512: 2 units at $80.16 each ($160.32)
+- Hex bolts M8 (box of 100), item HPF-3660: 25 units at $52.74 each ($1,318.50)
+
+Amount due: $10,986.52, payable by 2026-11-06.
+Invoice date: October 7, 2026
+
+Thanks,
+Sam Whitfield
+HARBOR POINT FASTENERS

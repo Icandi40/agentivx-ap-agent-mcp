@@ -1,0 +1,17 @@
+From: Morgan Chu <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice 34831 from Ironleaf Tools Inc.
+
+Hi team,
+
+Please find our invoice below for PO Number: PO-1063.
+
+- Copy paper, letter, 10 reams, item ILT-9106: 9 units at $223.61 each ($2,012.49)
+- Floor cleaner concentrate 5 gal, item ILT-7488: 41 units at $6.82 each ($279.62)
+
+Amount due: $2,292.11, payable by Nov 17, 2026.
+Invoice date: November 2, 2026
+
+Thanks,
+Morgan Chu
+Ironleaf Tools Inc.

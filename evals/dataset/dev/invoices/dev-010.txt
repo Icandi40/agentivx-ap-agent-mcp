@@ -1,0 +1,18 @@
+From: Priya Natarajan <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice INV-16734 from Cedar Ridge Packaging Co.
+
+Hi team,
+
+Please find our invoice below for P.O. # 1021.
+
+- Shipping labels 4x6 (500), item CRP-3178: 49 units at $24.14 each ($1,182.86)
+- Breaker 20A, item CRP-8233: 58 units at $95.79 each ($5,555.82)
+- Shipping labels 4x6 (500), item CRP-7524: 55 units at $68.05 each ($3,742.75)
+
+Amount due: $10,481.43, payable by 10 Dec 2026.
+Invoice date: Oct 26, 2026
+
+Thanks,
+Priya Natarajan
+Cedar Ridge Packaging Co.
