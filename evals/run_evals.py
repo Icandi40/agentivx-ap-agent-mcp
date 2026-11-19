@@ -152,6 +152,14 @@ def gate_checks(svc: APService, rows: list[dict]) -> dict:
     return dict(s)
 
 
+def field_table(s: dict) -> str:
+    rows = "\n".join(
+        f"| {f.replace('_', ' ')} | {s['field_acc'][f]}/{s['n']} | {pct(s['field_acc'][f], s['n'])} |"
+        for f in FIELDS
+    )
+    return "| Field | Correct | Rate |\n|---|---|---|\n" + rows
+
+
 def pct(n: int, d: int) -> str:
     return f"{n / d:.1%}" if d else "n/a"
 
@@ -184,8 +192,24 @@ def summarize(res: dict) -> dict:
     }
 
 
-def render(test: dict, dev: dict) -> str:
-    t, dv = summarize(test), summarize(dev)
+def miss_table(rows: list[dict]) -> str:
+    misses = [
+        r
+        for r in rows
+        if r["outcome"] != r["label"]["expected_outcome"] or not all(r["hits"].values())
+    ]
+    body = "\n".join(
+        f"| {r['label']['case_id']} | {r['label']['template']} ({r['label']['format']}) | "
+        f"{r['label']['expected_outcome']} ({r['label']['variant']}) | {r['outcome']} | "
+        f"{r['recommendation']} | {', '.join(f for f, ok in r['hits'].items() if not ok) or 'none'} |"
+        for r in misses
+    )
+    head = "| Case | Template | Expected | Agent said | Agent recommended | Wrong fields |\n"
+    return head + "|---|---|---|---|---|---|\n" + (body or "| none | | | | | |")
+
+
+def render(test: dict, dev: dict, unseen: dict) -> str:
+    t, dv, u = summarize(test), summarize(dev), summarize(unseen)
     rows, safety = test["rows"], test["safety"]
     conf = Counter((r["label"]["expected_outcome"], r["outcome"]) for r in rows)
     conf_md = "| Expected \\ Agent said | " + " | ".join(OUTCOMES) + " |\n|---|" + "---|" * 4 + "\n"
@@ -210,20 +234,7 @@ def render(test: dict, dev: dict) -> str:
         f"| {k} | {by_format[k]} | {pct(by_format_ok[k], by_format[k])} |"
         for k in sorted(by_format)
     )
-    misses = [
-        r
-        for r in rows
-        if r["outcome"] != r["label"]["expected_outcome"] or not all(r["hits"].values())
-    ]
-    miss_md = (
-        "\n".join(
-            f"| {r['label']['case_id']} | {r['label']['template']} ({r['label']['format']}) | "
-            f"{r['label']['expected_outcome']} ({r['label']['variant']}) | {r['outcome']} | "
-            f"{', '.join(f for f, ok in r['hits'].items() if not ok) or 'none'} |"
-            for r in misses
-        )
-        or "| none | | | | |"
-    )
+    miss_md = miss_table(rows)
     xbase = load_baseline(ROOT / "data" / "sample" / "xray_baseline.json")
     xray = render_markdown(estimate(xbase, t["hold_rate"], t["median_ms"] / 1000), xbase)
 
@@ -235,6 +246,12 @@ All invoices, vendors, purchase orders and receipts are **synthetic sample data*
 `evals/generate.py`. These are not client results. The headline set is the held-out
 **test** split ({t["n"]} invoices); the **dev** split ({dv["n"]} invoices) was used while
 writing the extractor and matcher.
+
+Read the test numbers with care. The test split uses the same three invoice layouts as
+dev (with new vendors' values, dates, amounts and wording choices), so it shows the
+extractor copes with new data in layouts it knows. It does not show how it copes with
+a layout it has never seen. The **unseen** split below answers that: two layouts added
+after the extractor was frozen in git commit `ad5e6d1`, measured without any tuning.
 
 ## Headline (test split, {t["n"]} invoices)
 
@@ -268,8 +285,6 @@ rubber-stamp process that approves everything would let all {t["bad"]} through.
 {conf_md}
 ## Extraction by field
 
-| Field | Correct | Rate |
-|---|---|---|
 {fields_md}
 
 | Template (format) | Invoices | All fields right |
@@ -299,9 +314,31 @@ example, it was held and not approved). The posting re-check only sees bills tha
 
 Every invoice where the outcome or any extracted field was wrong.
 
-| Case | Template | Expected | Agent said | Wrong fields |
-|---|---|---|---|---|
 {miss_md}
+
+## Layouts the extractor was never written for (unseen split, {u["n"]} invoices)
+
+Two layouts: a column-style accounting export (qty first, no pipes, no dollar signs,
+other label words) and an OCR-noisy scan (look-alike characters swapped, such as 0 for O
+and S for $). The extractor was not changed after these were added.
+
+| Metric | Unseen layouts |
+|---|---|
+| Extraction accuracy, all six fields right | {u["all_fields"]}/{u["n"]} ({pct(u["all_fields"], u["n"])}) |
+| Extraction accuracy, field level | {sum(u["field_acc"].values())}/{u["n"] * len(FIELDS)} ({pct(sum(u["field_acc"].values()), u["n"] * len(FIELDS))}) |
+| Correct-flag rate | {u["correct"]}/{u["n"]} ({pct(u["correct"], u["n"])}) |
+| False approvals prevented | {u["prevented"]}/{u["bad"]} ({pct(u["prevented"], u["bad"])}) |
+| Bad invoices the agent recommended approving | {u["bad"] - u["prevented"]} |
+| Clean invoices held for a person anyway | {u["held_clean"]}/{u["good"]} |
+
+{field_table(u)}
+
+What this shows: when the agent cannot read a layout, it does not guess its way to an
+approval. Unread fields turn into flags, so the invoice is held for a person. The cost
+is review time on clean invoices that were held. The fix for a real client is to add
+their actual vendor layouts (or a model based extractor) and rerun this script.
+
+{miss_table(unseen["rows"])}
 
 ## Process X-Ray estimate (sample data)
 
@@ -309,18 +346,24 @@ Every invoice where the outcome or any extracted field was wrong.
 
 
 def main() -> int:
-    for split in ("dev", "test"):
+    for split in ("dev", "test", "unseen"):
         if not (DATASET / split / "labels.json").exists():
             print("Dataset missing. Run: uv run python evals/generate.py", file=sys.stderr)
             return 1
     dev = run_split("dev")
     test = run_split("test")
-    md = render(test, dev)
+    unseen = run_split("unseen")
+    md = render(test, dev, unseen)
     (ROOT / "EVALS.md").write_text(md, encoding="utf-8")
     t = summarize(test)
     print(
         f"test: fields {t['all_fields']}/{t['n']}, flags {t['correct']}/{t['n']}, "
         f"prevented {t['prevented']}/{t['bad']}, median {t['median_ms']:.1f} ms -> EVALS.md"
+    )
+    u = summarize(unseen)
+    print(
+        f"unseen: fields {u['all_fields']}/{u['n']}, flags {u['correct']}/{u['n']}, "
+        f"prevented {u['prevented']}/{u['bad']}, clean held {u['held_clean']}/{u['good']}"
     )
     return 0
 

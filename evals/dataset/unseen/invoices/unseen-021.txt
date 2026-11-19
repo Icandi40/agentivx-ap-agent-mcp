@@ -1,0 +1,20 @@
+HARBOR POINT FASTENERS
+3215 Commerce Way, Suite 336
+Remit to: PO Box 4220, Sample City, ST 67967
+Phone (555) 0l2-8499
+
+INVOICE
+Invoice #: 28131
+Invoice Date: Nov 14, 2026
+Due Date: 14 Dec 2026
+Your PO PO-1014
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+HPF-6343 | Shipping labels 4x6 (500) | 8 | $206.65 | $1,653.20
+HPF-8683 | Cable ties 11in (1000) | 7 | $13.14 | $91.98
+HPF-7932 | Safety glasses | 26 | $95.52 | $2,483.52
+
+Subtotal: S4,228.70
+Total Due: $4,239.42
+Thank you for l2 years of business. Terms:Net 30.

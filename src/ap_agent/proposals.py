@@ -209,7 +209,15 @@ class ProposalStore:
     # Human decisions. Called only by the review page and the CLI, never by MCP tools.
 
     def approve(self, pid: str, approver: str, note: str = "") -> Proposal:
-        approver = approver.strip()
+        try:
+            return self._approve(pid, approver.strip(), note)
+        except ApprovalError as exc:
+            self.audit.write(
+                "approval_refused", approver.strip() or "(blank)", proposal_id=pid, reason=str(exc)
+            )
+            raise
+
+    def _approve(self, pid: str, approver: str, note: str) -> Proposal:
         with self._lock:
             p = self.get(pid)
             if p.status != "pending":

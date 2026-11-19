@@ -1,0 +1,18 @@
+Keystone Lab Supply
+7749 Commerce Way, Suite 51
+Remit to: PO Box 293, Sample City, ST 23716
+Phone (555) 015-7417
+
+INVOICE
+Invoice #: 29026
+Invoice Date: 15 Oct 2026
+Due Date: December 14, 2026
+PO Number: PO-1059
+Bill To:Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+KLS-1310 | C0py paper, letter, 10 reams | 1 | $19.70 | $19.70
+
+Subtotal: $19.70
+Total Due:$19.70
+Thank you for 12 years of business. Terms: Net 60.

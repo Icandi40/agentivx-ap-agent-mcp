@@ -1,0 +1,19 @@
+Cedar Ridge Packaging
+9194 Commerce Way, Suite 306
+Remit to: PO Box 7246, Sample City, ST 85367
+Ph0ne (555) 010-3343
+
+INVOICE
+Invoice #: 25134
+Invoice Date: Nov 3, 2026
+Due Date: Dec 18, 2026
+Your PO PO-1047
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+CRP-4223 | Toner cartridge, black | 49 | $28.30 | $1,386.70
+CRP-3430 | Cordless drill 20V | 7 | $202.52 | $1.417.64
+
+Subtotal: $2,804.34
+Total Due:$2,804.34
+Thank you for 12 years of business. Terms:Net 45.

@@ -1,0 +1,20 @@
+Redfern Freight Services
+7780 Commerce Way, Suite 370
+Remit to:PO Box 1700, Sample City, ST 17437
+Phone (555) 010-5812
+
+INVOlCE
+Invoice #: RE30537
+Invoice Date: 10/07/2026
+Due Date:N0vember 6, 2026
+P.O. # 1006
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+RFS-8255 | Breaker 20A | 27 | $10.37 | $279.99
+RFS-5643 | Floor cleaner concentrate 5 gal | 38 | $39.01 | $1,482.38
+RFS-8216 | Wire nuts assorted | 45 | $76.91 | $3,460.95
+
+Subtotal: $5,223.32
+Total Due: $5,223.32
+Thank you for 12 years of business. Terms: Net 30.

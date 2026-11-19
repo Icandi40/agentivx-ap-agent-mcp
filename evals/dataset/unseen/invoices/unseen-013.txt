@@ -1,0 +1,14 @@
+SUMMIT LINE ELECTRICAL
+TAX INVOICE
+Invoice Number      SU38604
+Invoice Date        Oct 29, 2026
+Payment Terms       Net 30
+Your Order No.      1031
+
+Qty   Item Code   Description                     Unit Price  Line Total
+6     SLE-1356    Toner cartridge, black              170.20    1,021.20
+38    SLE-3139    Floor cleaner concentrate 5 g       164.25    6,241.50
+16    SLE-8162    LED panel 2x4 40W                    35.28      564.48
+16    SLE-5966    Hex bolts M8 (box of 100)            85.04    1,360.64
+
+Invoice Total (USD)                                             9,187.82

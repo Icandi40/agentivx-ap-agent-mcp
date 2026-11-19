@@ -1,0 +1,13 @@
+Ironleaf Tools, Inc.
+TAX INVOICE
+Invoice Number      42684
+Invoice Date        October 26, 2026
+Payment Terms       Net 15
+Your Order No.      PO-1033
+
+Qty   Item Code   Description                     Unit Price  Line Total
+53    ILT-4442    Shipping labels 4x6 (500)           180.74    9,579.22
+30    ILT-4825    Copy paper, letter, 10 reams        112.05    3,361.50
+22    ILT-7602    Cordless drill 20V                    8.57      188.54
+
+Invoice Total (USD)                                            13,129.26

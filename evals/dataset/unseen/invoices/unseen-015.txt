@@ -1,0 +1,22 @@
+KEYSTONE LAB SUPPLY
+4994 Commerce Way, Suite 96
+Remit to: PO Box 5579, Sample City, ST 13465
+Ph0ne (555) 011-9015
+
+INVOICE
+Inv0ice #: INV-88125
+Invoice Date: Nov 13, 2026
+Due Date: 2027-01-12
+P.O. # 1007
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+KLS-9800 | Corrugated boxes 18x12x12 | 3 | $123.11 | $369.33
+KLS-1310 | Copy paper, letter, 10 reams | 60 | $19.70 | $1,182.00
+KLS-5289 | Mop heads (12) | 25 | $181.89 | $4,547.25
+KLS-8462 | Drill bit set 29pc | 53 | $82.61 | $4,378.33
+MSC-888 | Rush handling fee | 1 | $50.26 | $50.26
+
+Subtotal:$10,527.17
+T0tal Due: $10,527.17
+Thank you for 12 years of business. Terms: Net 60.

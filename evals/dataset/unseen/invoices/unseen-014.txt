@@ -1,0 +1,12 @@
+BLUEGATE OFFICE SUPPLY
+TAX INVOICE
+Invoice Number      92074
+Invoice Date        31 Oct 2026
+Payment Terms       Net 30
+Purchase Order      PO-1053
+
+Qty   Item Code   Description                     Unit Price  Line Total
+26    BGO-3116    Nitrile gloves, case                133.74    3,477.24
+44    BGO-7099    Cordless drill 20V                  175.59    7,725.96
+
+Invoice Total (USD)                                            11,203.20

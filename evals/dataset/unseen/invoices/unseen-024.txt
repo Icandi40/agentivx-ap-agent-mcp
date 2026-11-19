@@ -1,0 +1,12 @@
+REDFERN FREIGHT SERVICES
+TAX INVOICE
+Invoice Number      RE57571
+Invoice Date        November 6, 2026
+Payment Terms       Net 30
+Order Ref           PO-8282
+
+Qty   Item Code   Description                     Unit Price  Line Total
+7     RFS-8255    Breaker 20A                          10.37       72.59
+13    RFS-5643    Floor cleaner concentrate 5 g        39.01      507.13
+
+Invoice Total (USD)                                               579.72

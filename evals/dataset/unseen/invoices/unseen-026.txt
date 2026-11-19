@@ -1,0 +1,20 @@
+Redfern Freight Services. Inc.
+383 Commerce Way. Suite 254
+Remit to:PO Box 8407, Sample City, ST 32803
+Phone (555) 014-1944
+
+INVOICE
+Invoice #: RE79574
+Invoice Date: 11/01/2026
+Due Date: 0l Dec 2026
+Customer PO:8612
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+RFS-8255 | Breaker 20A | 13 | $10.37 | $134.81
+RFS-612 | Pallet wrap 18in | 14 | $l01.30 | $1,418.20
+RFS-5643 | Floor cleaner concentrate 5 gal | 10 | $39.01 | $390.10
+
+Subtotal:$1,943.11
+Total Due:$1,943.1l
+Thank you for 12 years of business. Terms: Net 30.

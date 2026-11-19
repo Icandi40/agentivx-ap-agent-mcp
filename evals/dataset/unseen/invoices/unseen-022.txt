@@ -1,0 +1,21 @@
+Cedar Ridge Packaging Co.
+5748 Commerce Way, Suite 222
+Remit to: P0 Box 7765, Sample City, ST 74615
+Phone (555) 015-7838
+
+INVOICE
+Invoice #: CE14764
+Invoice Date: 2026-11-03
+Due Date: 12/18/2026
+Purchase Order: PO-1029
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+KLS-1310 | Copy paper, letter, 10 reams | 57 | $19.70 | $1,122.90
+KLS-3145 | Hex bolts M8 (box of 100) | 53 | S74.63 | $3,955.39
+KLS-5289 | Mop heads (12) | 11 | $181.89 | $2,000.79
+KLS-9800 | Corrugated boxes 18x12x12 | 29 | $123.11 | $3,570.19
+
+Subtotal:$10,649.27
+Total Due: $10,649.27
+Thank you for l2 years of business. Terms: Net 45.

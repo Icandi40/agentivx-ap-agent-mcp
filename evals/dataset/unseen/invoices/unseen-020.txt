@@ -1,0 +1,13 @@
+Cedar Ridge Packaging, Inc.
+TAX INVOICE
+Invoice Number      INV-63959
+Invoice Date        Oct 24, 2026
+Payment Terms       Net 45
+Order Ref           PO-1019
+
+Qty   Item Code   Description                     Unit Price  Line Total
+22    CRP-4223    Toner cartridge, black               28.30      622.60
+28    CRP-811     Shipping labels 4x6 (500)           115.26    3,227.28
+1     ADJ-704     Restocking fee                       94.06       94.06
+
+Invoice Total (USD)                                             3,943.94

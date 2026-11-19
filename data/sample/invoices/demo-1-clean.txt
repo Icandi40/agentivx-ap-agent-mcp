@@ -1,0 +1,18 @@
+From: Priya Natarajan <billing@example-vendor.test>
+To: ap@sample-buyer.test
+Subject: Invoice INV-90337 from Harbor Point Fasteners, Inc.
+
+Hi team,
+
+Please find our invoice below for P.O. # 1032.
+
+- Shipping labels 4x6 (500), item HPF-1642: 10 units at $129.46 each ($1,294.60)
+- Breaker 20A, item HPF-1586: 11 units at $95.12 each ($1,046.32)
+- Mop heads (12), item HPF-7204: 7 units at $18.16 each ($127.12)
+
+Amount due: 2,468.04 USD, payable by 04 Nov 2026.
+Invoice date: 05 Oct 2026
+
+Thanks,
+Priya Natarajan
+Harbor Point Fasteners, Inc.

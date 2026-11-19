@@ -62,6 +62,36 @@ def _e(v: object) -> str:
     return html.escape(str(v if v is not None else ""))
 
 
+def _usd(v: object) -> str:
+    return f"${float(str(v)):,.2f}"
+
+
+def _num(v: object) -> str:
+    return f"{float(str(v)):g}"
+
+
+def _fields(pl: dict) -> str:
+    labels = {
+        "vendor_name": "Vendor",
+        "doc_number": "Invoice number",
+        "txn_date": "Invoice date",
+        "due_date": "Due date",
+        "po_number": "PO",
+        "total": "Total",
+        "bill_id": "Bill",
+        "bill_doc_number": "Bill invoice number",
+        "amount": "Amount",
+        "pay_date": "Pay on",
+        "invoice_ref": "Invoice ref",
+    }
+    rows = "".join(
+        f"<tr><th>{_e(label)}</th><td>{_e(_usd(pl[k]) if k in {'total', 'amount'} else pl[k])}</td></tr>"
+        for k, label in labels.items()
+        if pl.get(k) is not None
+    )
+    return f"<table>{rows}</table>"
+
+
 def _pill(word: str) -> str:
     return f"<span class='pill {_e(word)}'>{_e(word)}</span>"
 
@@ -79,7 +109,7 @@ def create_app(service: APService | None = None) -> Starlette:
         )
         return (
             f"<tr><td><a href='/p/{_e(p.id)}'>{_e(p.id)}</a></td><td>{what}</td>"
-            f"<td>${_e(p.amount)}</td><td>{_pill(p.recommendation)}</td>"
+            f"<td>{_usd(p.amount)}</td><td>{_pill(p.recommendation)}</td>"
             f"<td>{_pill(p.status)}</td></tr>"
         )
 
@@ -122,7 +152,7 @@ def create_app(service: APService | None = None) -> Starlette:
             lines += (
                 "".join(
                     f"<tr><td>{_e(ln['sku'])}</td><td>{_e(ln['description'])}</td><td>{_e(ln['qty'])}</td>"
-                    f"<td>${_e(ln['unit_price'])}</td><td>${_e(ln['amount'])}</td></tr>"
+                    f"<td>{_usd(ln['unit_price'])}</td><td>{_usd(ln['amount'])}</td></tr>"
                     for ln in pl["lines"]
                 )
                 + "</table>"
@@ -137,7 +167,7 @@ def create_app(service: APService | None = None) -> Starlette:
                 lines += (
                     "".join(
                         f"<tr><td>{_e(ln['sku'])}</td><td>{_e(ln['qty'])}</td>"
-                        f"<td>${_e(ln['unit_price'])}</td><td>{_e(got.get(ln['sku'], 0))}</td></tr>"
+                        f"<td>{_usd(ln['unit_price'])}</td><td>{_num(got.get(ln['sku'], 0))}</td></tr>"
                         for ln in po["lines"]
                     )
                     + "</table>"
@@ -167,12 +197,10 @@ def create_app(service: APService | None = None) -> Starlette:
             "<p><a href='/'>&larr; All proposals</a></p>"
             + (f"<p class='err'>{_e(error)}</p>" if error else "")
             + f"<h1>{_e(p.id)} {_pill(p.status)}</h1>"
-            f"<p class='sub'>{_e(p.kind)} for ${_e(p.amount)}. Agent recommends "
+            f"<p class='sub'>{_e(p.kind)} for {_usd(p.amount)}. Agent recommends "
             f"{_pill(p.recommendation)}</p>"
             f"<div class='card'><h2 style='margin-top:0'>Checks</h2>{flags}</div>"
-            f"<div class='card'><pre style='white-space:pre-wrap;margin:0'>"
-            f"{_e(json.dumps({k: v for k, v in pl.items() if k != 'lines'}, indent=2))}"
-            f"</pre>{lines}</div>"
+            f"<div class='card'>{_fields(pl)}{lines}</div>"
             + (f"<div class='card'>{approvals}</div>" if approvals else "")
             + (
                 f"<div class='card'>Result: <code>{_e(json.dumps(p.result))}</code></div>"

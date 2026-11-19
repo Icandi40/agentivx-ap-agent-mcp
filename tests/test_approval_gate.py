@@ -30,6 +30,7 @@ def test_agent_cannot_approve(svc, name):
     pid = svc.propose_bill(text=CLEAN_INVOICE)["proposal_id"]
     with pytest.raises(ApprovalError):
         svc.proposals.approve(pid, name)
+    assert svc.audit.entries(proposal_id=pid)[-1]["event"] == "approval_refused"
 
 
 def test_approve_then_post_records_approver(svc):

@@ -1,0 +1,21 @@
+Harbor Point Fasteners LLC
+9371 Commerce Way, Suite 200
+Remit to:PO Box 8762, Sample City, ST 13058
+Phone (555) 010-7669
+
+INVOICE
+Inv0ice #: 65543
+Invoice Date:08 Nov 2026
+Due Date:12/08/2026
+Purchase Order: PO-1060
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Descripti0n | Qty | Unit Price | Amount
+HPF-6343 | Shipping labels 4x6 (500) | 46 | $206.65 | S9,505.90
+HPF-7932 | Safety glasses | 8 | $95.52 | S764.16
+HPF-3413 | Cordless drill 20V | 5 | $194.28 | $971.40
+HPF-9015 | Pipette tips 200uL (rack) | 59 | $46.77 | $2,759.43
+
+Subtotal: $l4,000.89
+Total Due: S14,000.89
+Thank you for 12 years of business. Terms: Net 30.

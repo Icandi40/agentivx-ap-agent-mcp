@@ -1,0 +1,21 @@
+IRONLEAF T0OLS
+3600 Commerce Way, Suite 51
+Remit to: PO Box 4817, Sample City, ST 71086
+Phone (555) 012-5420
+
+INVOICE
+Invoice #: INV-73289
+Invoice Date: October 31, 2026
+Due Date: November 15, 2026
+Your PO PO-1050
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Descripti0n | Qty | Unit Price | Amount
+ILT-4825 | Copy paper, letter, 10 reams | 28 | $112.05 | $3,137.40
+ILT-2133 | LED panel 2x4 40W | 21 | $180.31 | $3,786.51
+ILT-4442 | Shipping labels 4x6 (500) | 38 | $180.74 | $6,868.12
+ILT-5976 | Hex bolts M8 (box 0f 100) | 28 | $105.50 | $2,954.00
+
+Subtotal: $16,746.03
+Total Due:$16,746.03
+Thank you for 12 years of business. Terms: Net 15.

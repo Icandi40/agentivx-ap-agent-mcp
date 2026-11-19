@@ -1,0 +1,965 @@
+[
+  {
+    "case_id": "unseen-002",
+    "file": "unseen-002.pdf",
+    "template": "columnar",
+    "format": "pdf",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Keystone Lab Supply",
+      "invoice_number": "INV-61336",
+      "invoice_date": "2026-11-01",
+      "po_number": "PO-1012",
+      "total": "5151.31",
+      "lines": [
+        [
+          "KLS-8462",
+          "44",
+          "82.61"
+        ],
+        [
+          "KLS-1310",
+          "5",
+          "19.70"
+        ],
+        [
+          "KLS-3145",
+          "19",
+          "74.63"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-003",
+    "file": "unseen-003.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Harbor Point Fasteners LLC",
+      "invoice_number": "65543",
+      "invoice_date": "2026-11-08",
+      "po_number": "PO-1060",
+      "total": "14000.89",
+      "lines": [
+        [
+          "HPF-6343",
+          "46",
+          "206.65"
+        ],
+        [
+          "HPF-7932",
+          "8",
+          "95.52"
+        ],
+        [
+          "HPF-3413",
+          "5",
+          "194.28"
+        ],
+        [
+          "HPF-9015",
+          "59",
+          "46.77"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-013",
+    "file": "unseen-013.txt",
+    "template": "columnar",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "price",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Summit Line Electrical Inc.",
+      "invoice_number": "SU38604",
+      "invoice_date": "2026-10-29",
+      "po_number": "PO-1031",
+      "total": "9187.82",
+      "lines": [
+        [
+          "SLE-1356",
+          "6",
+          "170.20"
+        ],
+        [
+          "SLE-3139",
+          "38",
+          "164.25"
+        ],
+        [
+          "SLE-8162",
+          "16",
+          "35.28"
+        ],
+        [
+          "SLE-5966",
+          "16",
+          "85.04"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-015",
+    "file": "unseen-015.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "extra_item",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Keystone Lab Supply",
+      "invoice_number": "INV-88125",
+      "invoice_date": "2026-11-13",
+      "po_number": "PO-1007",
+      "total": "10527.17",
+      "lines": [
+        [
+          "KLS-9800",
+          "3",
+          "123.11"
+        ],
+        [
+          "KLS-1310",
+          "60",
+          "19.70"
+        ],
+        [
+          "KLS-5289",
+          "25",
+          "181.89"
+        ],
+        [
+          "KLS-8462",
+          "53",
+          "82.61"
+        ],
+        [
+          "MSC-888",
+          "1",
+          "50.26"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-014",
+    "file": "unseen-014.txt",
+    "template": "columnar",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "qty_not_received",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Bluegate Office Supply",
+      "invoice_number": "92074",
+      "invoice_date": "2026-10-31",
+      "po_number": "PO-1053",
+      "total": "11203.20",
+      "lines": [
+        [
+          "BGO-3116",
+          "26",
+          "133.74"
+        ],
+        [
+          "BGO-7099",
+          "44",
+          "175.59"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-012",
+    "file": "unseen-012.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Ironleaf Tools Inc.",
+      "invoice_number": "43381",
+      "invoice_date": "2026-11-08",
+      "po_number": "PO-1009",
+      "total": "13719.15",
+      "lines": [
+        [
+          "ILT-4825",
+          "34",
+          "112.05"
+        ],
+        [
+          "ILT-2133",
+          "17",
+          "180.31"
+        ],
+        [
+          "ILT-5976",
+          "55",
+          "105.50"
+        ],
+        [
+          "ILT-2587",
+          "58",
+          "17.96"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-024",
+    "file": "unseen-024.txt",
+    "template": "columnar",
+    "format": "txt",
+    "expected_outcome": "missing_po",
+    "variant": "unknown_po",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Redfern Freight Services",
+      "invoice_number": "RE57571",
+      "invoice_date": "2026-11-06",
+      "po_number": "PO-8282",
+      "total": "579.72",
+      "lines": [
+        [
+          "RFS-8255",
+          "7",
+          "10.37"
+        ],
+        [
+          "RFS-5643",
+          "13",
+          "39.01"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-009",
+    "file": "unseen-009.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Ironleaf Tools Inc.",
+      "invoice_number": "INV-73289",
+      "invoice_date": "2026-10-31",
+      "po_number": "PO-1050",
+      "total": "16746.03",
+      "lines": [
+        [
+          "ILT-4825",
+          "28",
+          "112.05"
+        ],
+        [
+          "ILT-2133",
+          "21",
+          "180.31"
+        ],
+        [
+          "ILT-4442",
+          "38",
+          "180.74"
+        ],
+        [
+          "ILT-5976",
+          "28",
+          "105.50"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-027",
+    "file": "unseen-027.pdf",
+    "template": "columnar",
+    "format": "pdf",
+    "expected_outcome": "duplicate",
+    "variant": "already_billed",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Harbor Point Fasteners LLC",
+      "invoice_number": "INV-35935",
+      "invoice_date": "2026-11-14",
+      "po_number": "PO-1052",
+      "total": "3912.78",
+      "lines": [
+        [
+          "HPF-8683",
+          "7",
+          "13.14"
+        ],
+        [
+          "HPF-7932",
+          "40",
+          "95.52"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-029",
+    "file": "unseen-029.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "duplicate",
+    "variant": "already_billed",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Redfern Freight Services",
+      "invoice_number": "RE30537",
+      "invoice_date": "2026-10-07",
+      "po_number": "PO-1006",
+      "total": "5223.32",
+      "lines": [
+        [
+          "RFS-8255",
+          "27",
+          "10.37"
+        ],
+        [
+          "RFS-5643",
+          "38",
+          "39.01"
+        ],
+        [
+          "RFS-8216",
+          "45",
+          "76.91"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-018",
+    "file": "unseen-018.txt",
+    "template": "columnar",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "price",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Bluegate Office Supply",
+      "invoice_number": "BL49277",
+      "invoice_date": "2026-10-10",
+      "po_number": "PO-1057",
+      "total": "10658.38",
+      "lines": [
+        [
+          "BGO-523",
+          "47",
+          "136.90"
+        ],
+        [
+          "BGO-2819",
+          "38",
+          "111.16"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-007",
+    "file": "unseen-007.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Ironleaf Tools Inc.",
+      "invoice_number": "IR76591",
+      "invoice_date": "2026-11-06",
+      "po_number": "PO-1044",
+      "total": "171.40",
+      "lines": [
+        [
+          "ILT-7602",
+          "20",
+          "8.57"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-017",
+    "file": "unseen-017.txt",
+    "template": "columnar",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "wrong_vendor",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Keystone Lab Supply",
+      "invoice_number": "INV-52046",
+      "invoice_date": "2026-11-09",
+      "po_number": "PO-1003",
+      "total": "3463.66",
+      "lines": [
+        [
+          "RFS-6101",
+          "31",
+          "10.37"
+        ],
+        [
+          "RFS-5643",
+          "39",
+          "39.01"
+        ],
+        [
+          "RFS-612",
+          "16",
+          "101.30"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-022",
+    "file": "unseen-022.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "wrong_vendor",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Cedar Ridge Packaging Co.",
+      "invoice_number": "CE14764",
+      "invoice_date": "2026-11-03",
+      "po_number": "PO-1029",
+      "total": "10649.27",
+      "lines": [
+        [
+          "KLS-1310",
+          "57",
+          "19.70"
+        ],
+        [
+          "KLS-3145",
+          "53",
+          "74.63"
+        ],
+        [
+          "KLS-5289",
+          "11",
+          "181.89"
+        ],
+        [
+          "KLS-9800",
+          "29",
+          "123.11"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-028",
+    "file": "unseen-028.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "duplicate",
+    "variant": "resubmitted",
+    "notes": [
+      "copy of unseen-009"
+    ],
+    "expected": {
+      "vendor_name": "Ironleaf Tools Inc.",
+      "invoice_number": "INV-73289",
+      "invoice_date": "2026-10-31",
+      "po_number": "PO-1050",
+      "total": "16746.03",
+      "lines": [
+        [
+          "ILT-4825",
+          "28",
+          "112.05"
+        ],
+        [
+          "ILT-2133",
+          "21",
+          "180.31"
+        ],
+        [
+          "ILT-4442",
+          "38",
+          "180.74"
+        ],
+        [
+          "ILT-5976",
+          "28",
+          "105.50"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-021",
+    "file": "unseen-021.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "total_wrong",
+    "notes": [
+      "printed total does not equal the sum of lines"
+    ],
+    "expected": {
+      "vendor_name": "Harbor Point Fasteners LLC",
+      "invoice_number": "28131",
+      "invoice_date": "2026-11-14",
+      "po_number": "PO-1014",
+      "total": "4239.42",
+      "lines": [
+        [
+          "HPF-6343",
+          "8",
+          "206.65"
+        ],
+        [
+          "HPF-8683",
+          "7",
+          "13.14"
+        ],
+        [
+          "HPF-7932",
+          "26",
+          "95.52"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-025",
+    "file": "unseen-025.pdf",
+    "template": "columnar",
+    "format": "pdf",
+    "expected_outcome": "missing_po",
+    "variant": "no_reference",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Keystone Lab Supply",
+      "invoice_number": "INV-70448",
+      "invoice_date": "2026-10-27",
+      "po_number": null,
+      "total": "1966.53",
+      "lines": [
+        [
+          "KLS-5289",
+          "2",
+          "181.89"
+        ],
+        [
+          "KLS-2377",
+          "15",
+          "106.85"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-006",
+    "file": "unseen-006.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Bluegate Office Supply",
+      "invoice_number": "INV-78747",
+      "invoice_date": "2026-11-06",
+      "po_number": "PO-1049",
+      "total": "15806.78",
+      "lines": [
+        [
+          "BGO-6954",
+          "32",
+          "147.40"
+        ],
+        [
+          "BGO-2819",
+          "36",
+          "111.16"
+        ],
+        [
+          "BGO-3116",
+          "53",
+          "133.74"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-004",
+    "file": "unseen-004.pdf",
+    "template": "columnar",
+    "format": "pdf",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Ironleaf Tools Inc.",
+      "invoice_number": "38043",
+      "invoice_date": "2026-10-13",
+      "po_number": "PO-1036",
+      "total": "9250.95",
+      "lines": [
+        [
+          "ILT-7602",
+          "24",
+          "8.57"
+        ],
+        [
+          "ILT-4825",
+          "41",
+          "112.05"
+        ],
+        [
+          "ILT-2587",
+          "7",
+          "17.96"
+        ],
+        [
+          "ILT-5976",
+          "41",
+          "105.50"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-011",
+    "file": "unseen-011.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Keystone Lab Supply",
+      "invoice_number": "29026",
+      "invoice_date": "2026-10-15",
+      "po_number": "PO-1059",
+      "total": "19.70",
+      "lines": [
+        [
+          "KLS-1310",
+          "1",
+          "19.70"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-020",
+    "file": "unseen-020.txt",
+    "template": "columnar",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "extra_item",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Cedar Ridge Packaging Co.",
+      "invoice_number": "INV-63959",
+      "invoice_date": "2026-10-24",
+      "po_number": "PO-1019",
+      "total": "3943.94",
+      "lines": [
+        [
+          "CRP-4223",
+          "22",
+          "28.30"
+        ],
+        [
+          "CRP-811",
+          "28",
+          "115.26"
+        ],
+        [
+          "ADJ-704",
+          "1",
+          "94.06"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-010",
+    "file": "unseen-010.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Ironleaf Tools Inc.",
+      "invoice_number": "IR74744",
+      "invoice_date": "2026-10-07",
+      "po_number": "PO-1054",
+      "total": "540.93",
+      "lines": [
+        [
+          "ILT-2133",
+          "3",
+          "180.31"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-030",
+    "file": "unseen-030.txt",
+    "template": "columnar",
+    "format": "txt",
+    "expected_outcome": "duplicate",
+    "variant": "resubmitted",
+    "notes": [
+      "copy of unseen-011"
+    ],
+    "expected": {
+      "vendor_name": "Keystone Lab Supply",
+      "invoice_number": "29026",
+      "invoice_date": "2026-10-15",
+      "po_number": "PO-1059",
+      "total": "19.70",
+      "lines": [
+        [
+          "KLS-1310",
+          "1",
+          "19.70"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-023",
+    "file": "unseen-023.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "missing_po",
+    "variant": "no_reference",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Redfern Freight Services",
+      "invoice_number": "RE64157",
+      "invoice_date": "2026-11-14",
+      "po_number": null,
+      "total": "2811.06",
+      "lines": [
+        [
+          "RFS-2360",
+          "18",
+          "156.17"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-005",
+    "file": "unseen-005.pdf",
+    "template": "columnar",
+    "format": "pdf",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Bluegate Office Supply",
+      "invoice_number": "BL2140",
+      "invoice_date": "2026-10-12",
+      "po_number": "PO-1027",
+      "total": "20556.01",
+      "lines": [
+        [
+          "BGO-3116",
+          "41",
+          "133.74"
+        ],
+        [
+          "BGO-7392",
+          "29",
+          "86.07"
+        ],
+        [
+          "BGO-2819",
+          "31",
+          "111.16"
+        ],
+        [
+          "BGO-7099",
+          "52",
+          "175.59"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-026",
+    "file": "unseen-026.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "missing_po",
+    "variant": "unknown_po",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Redfern Freight Services",
+      "invoice_number": "RE79574",
+      "invoice_date": "2026-11-01",
+      "po_number": "PO-8612",
+      "total": "1943.11",
+      "lines": [
+        [
+          "RFS-8255",
+          "13",
+          "10.37"
+        ],
+        [
+          "RFS-612",
+          "14",
+          "101.30"
+        ],
+        [
+          "RFS-5643",
+          "10",
+          "39.01"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-008",
+    "file": "unseen-008.txt",
+    "template": "columnar",
+    "format": "txt",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Ironleaf Tools Inc.",
+      "invoice_number": "42684",
+      "invoice_date": "2026-10-26",
+      "po_number": "PO-1033",
+      "total": "13129.26",
+      "lines": [
+        [
+          "ILT-4442",
+          "53",
+          "180.74"
+        ],
+        [
+          "ILT-4825",
+          "30",
+          "112.05"
+        ],
+        [
+          "ILT-7602",
+          "22",
+          "8.57"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-016",
+    "file": "unseen-016.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "total_wrong",
+    "notes": [
+      "printed total does not equal the sum of lines"
+    ],
+    "expected": {
+      "vendor_name": "Summit Line Electrical Inc.",
+      "invoice_number": "INV-4621",
+      "invoice_date": "2026-10-14",
+      "po_number": "PO-1034",
+      "total": "11123.66",
+      "lines": [
+        [
+          "SLE-5917",
+          "60",
+          "175.92"
+        ],
+        [
+          "SLE-3139",
+          "1",
+          "164.25"
+        ],
+        [
+          "SLE-8162",
+          "4",
+          "33.41"
+        ],
+        [
+          "SLE-1356",
+          "1",
+          "170.20"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-001",
+    "file": "unseen-001.pdf",
+    "template": "columnar",
+    "format": "pdf",
+    "expected_outcome": "match",
+    "variant": "clean",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Keystone Lab Supply",
+      "invoice_number": "66668",
+      "invoice_date": "2026-11-12",
+      "po_number": "PO-1040",
+      "total": "363.78",
+      "lines": [
+        [
+          "KLS-5289",
+          "2",
+          "181.89"
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "unseen-019",
+    "file": "unseen-019.txt",
+    "template": "ocr",
+    "format": "txt",
+    "expected_outcome": "mismatch",
+    "variant": "qty_not_received",
+    "notes": [],
+    "expected": {
+      "vendor_name": "Cedar Ridge Packaging Co.",
+      "invoice_number": "25134",
+      "invoice_date": "2026-11-03",
+      "po_number": "PO-1047",
+      "total": "2804.34",
+      "lines": [
+        [
+          "CRP-4223",
+          "49",
+          "28.30"
+        ],
+        [
+          "CRP-3430",
+          "7",
+          "202.52"
+        ]
+      ]
+    }
+  }
+]

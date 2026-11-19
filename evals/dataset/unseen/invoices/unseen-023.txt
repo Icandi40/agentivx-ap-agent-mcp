@@ -1,0 +1,17 @@
+Redfern Freight Services
+7445 Commerce Way, Suite 400
+Remit to: PO Box 2322, Sample City, ST 52825
+Phone (555) 014-1974
+
+INVOICE
+lnvoice #: RE64157
+Invoice Date: Nov 14, 2026
+Due Date: 12/14/2026
+Bill To:Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+RFS-2360 | Safety glasses | 18 | $156.17 | $2,811.06
+
+Subtotal: $2,811.06
+Total Due: $2,811.06
+Thank you for l2 years of business. Terms: Net 30.

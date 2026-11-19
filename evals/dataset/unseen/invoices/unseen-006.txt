@@ -1,0 +1,20 @@
+Bluegate Office Supply
+764 Commerce Way, Suite 281
+Remit to: PO Box 1679, Sample City, ST 21605
+Phone (555) 014-9747
+
+INV0ICE
+Invoice #: INV-78747
+Invoice Date: November 6. 2026
+Due Date: 2026-12-06
+Purchase Order: PO-1049
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+BG0-6954 | LED panel 2x4 40W | 32 | $147.40 | $4,716.80
+BGO-2819 | Packing tape 3in (36) | 36 | $111.16 | $4,001.76
+BGO-3116 | Nitrile gloves, case | 53 | $133.74 | $7,088.22
+
+Subtotal: $l5,806.78
+Total Due:$15.806.78
+Thank you for 12 years of business. Terms: Net 30.

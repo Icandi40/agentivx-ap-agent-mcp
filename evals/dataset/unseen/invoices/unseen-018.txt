@@ -1,0 +1,12 @@
+Bluegate Office Supply
+TAX INVOICE
+Invoice Number      BL49277
+Invoice Date        Oct 10, 2026
+Payment Terms       Net 30
+Your Order No.      PO-1057
+
+Qty   Item Code   Description                     Unit Price  Line Total
+47    BGO-523     Pipette tips 200uL (rack)           136.90    6,434.30
+38    BGO-2819    Packing tape 3in (36)               111.16    4,224.08
+
+Invoice Total (USD)                                            10,658.38

@@ -1,0 +1,21 @@
+Ironleaf Tools Inc.
+1050 Commerce Way. Suite 347
+Remit to: PO Box 679, Sample City. ST 87305
+Phone (555) 016-7240
+
+INV0ICE
+Invoice #: 43381
+Invoice Date: 08 Nov 2026
+Due Date: 11/23/2026
+Your PO PO-1009
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+ILT-4825 | Copy paper, letter. 10 reams | 34 | $112.05 | $3,809.70
+ILT-2133 | LED panel 2x4 40W | 17 | $180.31 | $3,065.27
+lLT-5976 | Hex bolts M8 (box of 100) | 55 | $105.50 | $5,802.50
+ILT-2587 | Nitrile gloves, case | 58 | $17.96 | $l,041.68
+
+Subtotal:$13,719.15
+Total Due: $13,719.15
+Thank you for 12 years of business. Terms: Net 15.

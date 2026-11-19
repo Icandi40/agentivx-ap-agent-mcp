@@ -14,7 +14,7 @@ from __future__ import annotations
 import json
 import random
 from dataclasses import dataclass, field
-from datetime import date, timedelta
+from datetime import UTC, date, datetime, timedelta
 from decimal import Decimal
 from pathlib import Path
 
@@ -56,6 +56,14 @@ PEOPLE = ["Dana Ruiz", "Lee Okafor", "Priya Natarajan", "Sam Whitfield", "Morgan
 OUTCOME_MIX = {
     "dev": {"match": 8, "mismatch": 6, "duplicate": 3, "missing_po": 3},
     "test": {"match": 24, "mismatch": 18, "duplicate": 9, "missing_po": 9},
+    "unseen": {"match": 12, "mismatch": 10, "duplicate": 4, "missing_po": 4},
+}
+# Layouts per split. "columnar" and "ocr" were added after the extractor was frozen
+# (see git history), so the "unseen" split measures layouts it was never written for.
+TEMPLATES = {
+    "dev": ["formal", "email", "terse"],
+    "test": ["formal", "email", "terse"],
+    "unseen": ["columnar", "ocr"],
 }
 MISMATCH_KINDS = ["price", "qty_not_received", "extra_item", "total_wrong", "wrong_vendor"]
 
@@ -303,10 +311,13 @@ def make_cases(rng: random.Random, company: dict, split: str) -> list[Case]:
                 order[c.case_id], order[src] = order[src], order[c.case_id]
     cases.sort(key=lambda c: order[c.case_id])
 
-    templates = ["formal", "email", "terse"]
+    templates = TEMPLATES[split]
     for i, c in enumerate(cases):
-        c.template = templates[i % 3] if c.variant != "resubmitted" else rng.choice(templates)
-        c.fmt = "pdf" if c.template == "formal" and rng.random() < 0.5 else "txt"
+        if c.variant == "resubmitted":
+            c.template = rng.choice(templates)
+        else:
+            c.template = templates[i % len(templates)]
+        c.fmt = "pdf" if c.template in {"formal", "columnar"} and rng.random() < 0.5 else "txt"
     return cases
 
 
@@ -348,9 +359,57 @@ def po_phrase(rng: random.Random, po: str) -> str:
     )
 
 
+OCR_SWAPS = [("I", "l"), ("O", "0"), ("$", "S"), ("1", "l"), ("o", "0"), (",", ".")]
+
+
+def ocr_noise(rng: random.Random, text: str) -> str:
+    """Imitate a poor scan: swap look-alike characters and break some spacing."""
+    out = []
+    for line in text.split("\n"):
+        if rng.random() < 0.45:
+            a, b = rng.choice(OCR_SWAPS)
+            idx = [i for i, ch in enumerate(line) if ch == a]
+            if idx:
+                i = rng.choice(idx)
+                line = line[:i] + b + line[i + 1 :]
+        if rng.random() < 0.2:
+            line = line.replace(": ", ":", 1)
+        out.append(line)
+    return "\n".join(out)
+
+
+def render_columnar(rng: random.Random, c: Case, vname: str) -> str:
+    """An accounting-package export: label columns, qty first, no pipes, no $ signs."""
+    po_label = rng.choice(["Order Ref", "PO Number", "Your Order No.", "Purchase Order"])
+    out = [
+        vname,
+        "TAX INVOICE",
+        f"Invoice Number      {c.invoice_number}",
+        f"Invoice Date        {fmt_date(rng, c.invoice_date)}",
+        f"Payment Terms       Net {(c.due_date - c.invoice_date).days}",
+    ]
+    if c.po_ref:
+        out.append(f"{po_label:<20}{c.po_ref.split('-')[1] if rng.random() < 0.5 else c.po_ref}")
+    out += [
+        "",
+        f"{'Qty':<6}{'Item Code':<12}{'Description':<30}{'Unit Price':>12}{'Line Total':>12}",
+    ]
+    for ln in c.lines:
+        out.append(
+            f"{ln['qty']!s:<6}{ln['sku']:<12}{ln['description'][:29]:<30}"
+            f"{ln['unit_price']:>12,.2f}{ln['amount']:>12,.2f}"
+        )
+    out += ["", f"{'Invoice Total (USD)':<60}{c.total:>12,.2f}"]
+    return "\n".join(out)
+
+
 def render(rng: random.Random, c: Case) -> str:
     vname = vendor_variant(rng, c.vendor_name)
     person = rng.choice(PEOPLE)
+    if c.template == "columnar":
+        return render_columnar(rng, c, vname)
+    if c.template == "ocr":
+        return ocr_noise(rng, render(rng, Case(**{**c.__dict__, "template": "formal"})))
     if c.template == "formal":
         rows = [
             f"{ln['sku']} | {ln['description']} | {ln['qty']} | "
@@ -431,6 +490,7 @@ def write_pdf(text: str, path: Path) -> None:
     from fpdf import FPDF
 
     pdf = FPDF()
+    pdf.set_creation_date(datetime(2026, 11, 18, tzinfo=UTC))  # reproducible bytes
     pdf.add_page()
     pdf.set_font("Helvetica", size=10)
     for line in text.split("\n"):
@@ -480,9 +540,33 @@ def generate(split: str, seed: int, n_pos: int) -> None:
     print(f"{split}: {len(cases)} invoices {counts} -> {d}")
 
 
+def make_demo_sample() -> None:
+    """Copy the dev company and three dev invoices into data/sample for the demo."""
+    dev = OUT / "dev"
+    sample = ROOT.parent / "data" / "sample"
+    (sample / "invoices").mkdir(parents=True, exist_ok=True)
+    (sample / "company.json").write_text(
+        (dev / "company.json").read_text(encoding="utf-8"), encoding="utf-8"
+    )
+    labels = json.loads((dev / "labels.json").read_text(encoding="utf-8"))
+    picks = {
+        "1-clean": next(x for x in labels if x["expected_outcome"] == "match"),
+        "2-price-variance": next(x for x in labels if x["variant"] == "price"),
+        "3-no-po": next(x for x in labels if x["expected_outcome"] == "missing_po"),
+    }
+    for old in (sample / "invoices").iterdir():
+        old.unlink()
+    for stem, lab in picks.items():
+        src = dev / "invoices" / lab["file"]
+        (sample / "invoices" / f"demo-{stem}{src.suffix}").write_bytes(src.read_bytes())
+    print(f"demo sample -> {sample}")
+
+
 def main() -> None:
     generate("dev", seed=7, n_pos=40)
     generate("test", seed=20261118, n_pos=90)
+    generate("unseen", seed=424242, n_pos=60)
+    make_demo_sample()
 
 
 if __name__ == "__main__":

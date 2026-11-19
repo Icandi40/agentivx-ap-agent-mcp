@@ -1,0 +1,21 @@
+Summit Line Electrical
+4623 Commerce Way. Suite 398
+Remit to: PO B0x 1577, Sample City, ST 34697
+Phone (555) 013-1634
+
+INV0ICE
+lnvoice #:INV-4621
+Inv0ice Date: Oct 14, 2026
+Due Date: 13 Nov 2026
+Your PO PO-l034
+Bill To: Sample Buyer Co. (demo c0mpany)
+
+SKU | Description | Qty | Unit Price | Amount
+SLE-5917 | Floor cleaner concentrate 5 gal | 60 | S175.92 | $10,555.20
+SLE-3139 | Floor cleaner concentrate 5 gal | 1 | $164.25 | $164.25
+SLE-8162 | LED panel 2x4 40W | 4 | $33.41 | $133.64
+SLE-1356 | Toner cartridge. black | 1 | $170.20 | $170.20
+
+Subtotal: $11,023.29
+Total Due: $11,123.66
+Thank you for 12 years of business. Terms: Net 30.

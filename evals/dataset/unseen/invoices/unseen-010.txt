@@ -1,0 +1,18 @@
+Ironleaf Tools, Inc.
+7766 Commerce Way, Suite 43
+Remit to: PO Box 2573, Sample City, ST 88554
+Phone (555) 014-4407
+
+INVOICE
+Invoice #:IR74744
+Invoice Date:October 7, 2026
+Due Date: 10/22/2026
+Purchase Order: PO-1054
+Bill To:Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+ILT-2133 | LED panel 2x4 40W | 3 | $180.31 | S540.93
+
+Subtotal: $540.93
+Total Due:$540.93
+Thank you for 12 years of business. Terms: Net 15.

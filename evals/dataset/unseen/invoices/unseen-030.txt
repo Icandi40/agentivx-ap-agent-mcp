@@ -1,0 +1,11 @@
+Keystone Lab Supply
+TAX INVOICE
+Invoice Number      29026
+Invoice Date        Oct 15, 2026
+Payment Terms       Net 60
+Purchase Order      PO-1059
+
+Qty   Item Code   Description                     Unit Price  Line Total
+1     KLS-1310    Copy paper, letter, 10 reams         19.70       19.70
+
+Invoice Total (USD)                                                19.70

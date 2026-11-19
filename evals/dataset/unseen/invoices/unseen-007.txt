@@ -1,0 +1,18 @@
+IRONLEAF TOOLS
+6088 Commerce Way, Suite 134
+Remit to: PO Box 4726, Sample City, ST 8066l
+Phone (555) 014-6100
+
+INVOlCE
+Invoice #:IR76591
+Invoice Date: November 6, 2026
+Due Date: November 21, 2026
+Purchase Order: PO-1044
+Bill To: Sample Buyer Co. (demo company)
+
+SKU | Description | Qty | Unit Price | Amount
+ILT-7602 | Cordless drill 20V | 20 | $8.57 | $17l.40
+
+Subtotal: $171.40
+Total Due: $171.40
+Thank you for 12 years of business. Terms: Net 15.
