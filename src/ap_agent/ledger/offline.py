@@ -22,6 +22,7 @@ from ap_agent.models import (
     ScheduledPayment,
     Vendor,
     money,
+    po_key,
     to_jsonable,
 )
 
@@ -112,7 +113,7 @@ class OfflineLedger:
 
     def get_purchase_order(self, doc_number: str) -> PurchaseOrder | None:
         for p in self._data["purchase_orders"]:
-            if p["doc_number"].upper() == doc_number.upper():
+            if po_key(p["doc_number"]) == po_key(doc_number):
                 return _po_from(p)
         return None
 
@@ -125,7 +126,7 @@ class OfflineLedger:
                 received_date=r.get("received_date", ""),
             )
             for r in self._data["receipts"]
-            if r["po_number"].upper() == po_number.upper()
+            if po_key(r["po_number"]) == po_key(po_number)
         ]
 
     # Writes. Only the approval executor calls these.

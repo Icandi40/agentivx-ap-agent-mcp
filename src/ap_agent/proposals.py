@@ -15,6 +15,7 @@ the audit log.
 
 from __future__ import annotations
 
+import builtins
 import hashlib
 import json
 import sqlite3
@@ -173,7 +174,7 @@ class ProposalStore:
         *,
         amount: Decimal,
         recommendation: str,
-        flags: list[dict[str, Any]],
+        flags: builtins.list[dict[str, Any]],
         created_by: str = "ap-agent",
     ) -> Proposal:
         if kind not in {"create_bill", "schedule_payment"}:

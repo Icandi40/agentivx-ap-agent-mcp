@@ -138,11 +138,12 @@ def three_way_match(
             )
         if ln.qty > po_line.qty:
             flags.append(Flag("QTY_OVER_PO", f"{ln.sku}: invoiced {ln.qty}, ordered {po_line.qty}"))
-        if ln.qty > received.get(ln.sku, Decimal(0)):
+        got = received.get(ln.sku or "", Decimal(0))
+        if ln.qty > got:
             flags.append(
                 Flag(
                     "QTY_NOT_RECEIVED",
-                    f"{ln.sku}: invoiced {ln.qty}, received {received.get(ln.sku, Decimal(0))}",
+                    f"{ln.sku}: invoiced {ln.qty}, received {got}",
                 )
             )
     if inv.total is not None and inv.lines and abs(money(line_sum) - inv.total) > TOTAL_TOLERANCE:

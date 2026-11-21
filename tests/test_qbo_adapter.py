@@ -172,3 +172,76 @@ def test_payment_over_balance_refused():
 
     with pytest.raises(ValueError):
         make(handler).schedule_payment(bill_id="901", amount=Decimal(84), pay_date="2026-12-01")
+
+
+# Differences found on the first live sandbox run (2026-11-21)
+
+
+def test_po_numbers_match_with_or_without_prefix():
+    from ap_agent.models import po_key
+
+    assert po_key("PO-1002") == po_key("1002") == po_key("P.O. 1002") == po_key("po 1002")
+    assert po_key("PO-1002") != po_key("1003")
+    assert po_key("POLE-7") == "POLE7"  # only strips a PO prefix in front of digits
+
+
+def test_live_po_shape_uses_item_sku_and_bare_doc_number(tmp_path):
+    log = tmp_path / "receiving.csv"
+    log.write_text("po_number,sku,qty_received,received_date\n1002,RFN-1250,1,2026-11-20\n")
+
+    def handler(req: httpx.Request) -> httpx.Response:
+        q = req.url.params["query"]
+        if "from Item" in q:
+            return httpx.Response(
+                200,
+                json={
+                    "QueryResponse": {
+                        "Item": [
+                            {"Id": "5", "Name": "Rock Fountain", "Sku": "RFN-1250"},
+                            {"Id": "11", "Name": "Pump"},
+                        ]
+                    }
+                },
+            )
+        return httpx.Response(
+            200,
+            json={
+                "QueryResponse": {
+                    "PurchaseOrder": [
+                        {
+                            "Id": "45",
+                            "DocNumber": "1002",
+                            "POStatus": "Open",
+                            "VendorRef": {"value": "51"},
+                            "Line": [
+                                {
+                                    "Amount": 125.0,
+                                    "DetailType": "ItemBasedExpenseLineDetail",
+                                    "ItemBasedExpenseLineDetail": {
+                                        "ItemRef": {"value": "5", "name": "Rock Fountain"},
+                                        "UnitPrice": 125,
+                                        "Qty": 1,
+                                    },
+                                },
+                                {
+                                    "Amount": 10.0,
+                                    "DetailType": "ItemBasedExpenseLineDetail",
+                                    "ItemBasedExpenseLineDetail": {
+                                        "ItemRef": {"value": "11", "name": "Pump"},
+                                        "UnitPrice": 10,
+                                        "Qty": 1,
+                                    },
+                                },
+                            ],
+                        }
+                    ]
+                }
+            },
+        )
+
+    led = make(handler)
+    led.receiving_log = log
+    po = led.get_purchase_order("PO-1002")  # invoices print PO-1002, QBO stores 1002
+    assert po is not None and po.doc_number == "1002"
+    assert [ln.sku for ln in po.lines] == ["RFN-1250", "Pump"]  # Sku when set, else name
+    assert [r.sku for r in led.list_receipts("PO-1002")] == ["RFN-1250"]

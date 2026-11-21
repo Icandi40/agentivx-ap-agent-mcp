@@ -21,6 +21,15 @@ def money(value: Any) -> Decimal:
     return d.quantize(CENT, rounding=ROUND_HALF_UP)
 
 
+def po_key(doc_number: str | None) -> str:
+    """Compare PO numbers the way people write them: "PO-1002", "PO 1002" and "1002" match.
+
+    QuickBooks stores the bare number; vendors usually print a PO- prefix.
+    """
+    key = "".join(ch for ch in (doc_number or "").upper() if ch.isalnum())
+    return key[2:] if key.startswith("PO") and key[2:].isdigit() else key
+
+
 def to_jsonable(obj: Any) -> Any:
     """Recursively turn dataclasses and Decimals into JSON friendly values."""
     if hasattr(obj, "__dataclass_fields__"):

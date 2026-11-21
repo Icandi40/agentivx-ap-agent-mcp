@@ -17,6 +17,7 @@ from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 from decimal import Decimal
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "dataset"
@@ -91,7 +92,8 @@ def m(x: Decimal | float | str) -> Decimal:
 
 
 def build_company(rng: random.Random, n_pos: int) -> dict:
-    vendors, catalog = [], {}
+    vendors: list[dict[str, Any]] = []
+    catalog: dict[str, list[dict[str, Any]]] = {}
     for i, (name, prefix, domain, terms) in enumerate(VENDORS, start=1):
         vid = str(i)
         vendors.append(

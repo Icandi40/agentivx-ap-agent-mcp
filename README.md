@@ -148,6 +148,10 @@ uv run ruff check .
 ```
 
 ```powershell
+uv run mypy
+```
+
+```powershell
 uv run python evals/generate.py
 ```
 
@@ -194,12 +198,49 @@ company file.
    (Chart of Accounts). Set them and switch the ledger:
 
 ```powershell
-$env:AP_AGENT_LEDGER = "qbo"; $env:AP_QBO_EXPENSE_ACCOUNT_ID = "7"; $env:AP_QBO_BANK_ACCOUNT_ID = "35"
+$env:AP_AGENT_LEDGER = "qbo"; $env:AP_QBO_EXPENSE_ACCOUNT_ID = "78"; $env:AP_QBO_BANK_ACCOUNT_ID = "35"
 ```
 
-4. Optional: point `AP_AGENT_RECEIVING_LOG` at a CSV with columns
+4. Point `AP_AGENT_RECEIVING_LOG` at a CSV with columns
    `po_number,sku,qty_received,received_date`. QuickBooks Online has no goods receipt object in
    its API, so receipts come from a receiving log, as they do in many small businesses.
+5. PO lines are matched on the item's **SKU** field, or the item name when the SKU is blank.
+   Give the items on your sandbox POs a SKU in the same form the vendor prints (for example
+   `RFN-1250`). PO numbers match with or without a `PO-` prefix.
+
+## Live sandbox run (2026-11-21)
+
+First run against a real QuickBooks Online sandbox company ("Sandbox Company US", company id
+9341458752057153, Intuit's sample data). Sample files are in `data/sample/live/`; the audit log
+from the run is in `docs/live-run-2026-11-21/audit.jsonl`.
+
+What happened, in order:
+
+1. Read-only probes worked as written: 26 vendors, 3 purchase orders, the chart of accounts.
+   Expense account 78 ("Purchases") and bank account 35 ("Checking") were used.
+2. Open PO 1002 (Tim Philip Masonry, 1 Rock Fountain at $125.00) fit, so no PO was created.
+   One sandbox write to set it up: the Rock Fountain item got the SKU `RFN-1250`.
+3. Clean invoice TPM-24117: **match**, agent recommended approve. Posting before approval was
+   **refused**. Sheena approved the live test in chat; Claude entered that approval with
+   `--by "Sheena Lindsey-Smith"` and a note saying so. Posting then created **bill 145** in the
+   sandbox. Reading bill 145 back from QuickBooks showed DocNumber TPM-24117, $125.00, vendor 51,
+   account 78, and the private note "Approved by Sheena Lindsey-Smith. PO 1002".
+4. The same invoice sent again: **duplicate**, held (matched bill 145 in QuickBooks).
+5. TPM-24118 billed at $137.50 against the $125.00 PO price: **mismatch** (PRICE_VARIANCE), held.
+6. `ap-agent audit`: 15 entries, hash chain ok. Each invoice took about 1.7 to 2.5 seconds from
+   receipt to proposal, almost all of it QuickBooks API calls.
+
+The two held proposals were left pending. Nobody decided them, so nothing was recorded.
+
+Differences between the mocked API and the live one, both fixed in the adapter (the extractor
+was not changed, so the unseen-layout evals still measure the frozen version):
+
+- QuickBooks stores PO numbers bare (`1002`) while invoices print `PO-1002`, so the PO lookup
+  missed. PO numbers are now compared with and without the prefix.
+- QuickBooks PO lines name an item ("Rock Fountain"), not a code. The adapter now reads each
+  item's SKU field and falls back to the name.
+
+Also fixed while here: `pyproject.toml` allowed MCP SDK 1.x, but the server uses the 2.x API.
 
 ## Two-minute demo script
 
@@ -230,10 +271,14 @@ with http://127.0.0.1:8787 open.
 - **Extraction is rule based.** Exact on the layouts it was written for, weak on new ones
   (see the unseen split). It fails safe, but a real deployment needs the client's own layouts
   or a model-based extractor behind the same function, measured by the same script.
-- **The live QuickBooks adapter is tested against a mocked Intuit API, not yet against a live
-  sandbox company.** Request shapes follow the QuickBooks Online Accounting API v3; expect small
-  fixes on the first live run. Bills post as expense-account lines and are not yet linked to
-  the PO record in QuickBooks; the PO number goes in the private note.
+- **One live sandbox run so far.** Reads, bill creation and duplicate detection were run
+  against a real QuickBooks Online sandbox on 2026-11-21 (see above). Scheduled payments
+  (BillPayment) and token refresh after expiry have only been tested against a mocked API.
+- **Bills are not linked to the PO in QuickBooks.** They post as expense-account lines with the
+  PO number in the private note, so the PO stays open in QuickBooks and inventory quantities
+  are not updated. Item-based bill lines linked to the PO are the next step.
+- **Live matching depends on item SKUs.** Vendors print their own codes; the sandbox items had
+  none until one was set for the test. A real rollout needs a vendor-code to item mapping.
 - **Reviewer identity is a typed name.** A real deployment would take it from the company's
   single sign-on. The review page binds to 127.0.0.1 and uses a form token, nothing more.
 - **Approval is a local web page and a CLI.** A Slack or Teams approval card would call the same
@@ -258,7 +303,9 @@ src/ap_agent/
   xray.py          Process X-Ray estimate
 evals/             synthetic data generator, eval runner, generated dataset
 data/sample/       sample company, demo invoices, X-Ray sample assumptions
-tests/             43 tests, including a check for em and en dashes
+data/sample/live/  sample invoices and receiving log for the live sandbox run
+docs/live-run-2026-11-21/  audit log from that run
+tests/             45 tests, including a check for em and en dashes
 ```
 
 MIT license.

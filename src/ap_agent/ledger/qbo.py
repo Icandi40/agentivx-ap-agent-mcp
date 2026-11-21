@@ -30,6 +30,7 @@ from ap_agent.models import (
     ScheduledPayment,
     Vendor,
     money,
+    po_key,
 )
 
 SANDBOX_HOST = "sandbox-quickbooks.api.intuit.com"
@@ -63,7 +64,10 @@ def vendor_from_qbo(v: dict[str, Any]) -> Vendor:
     )
 
 
-def po_from_qbo(p: dict[str, Any]) -> PurchaseOrder:
+def po_from_qbo(p: dict[str, Any], item_codes: dict[str, str] | None = None) -> PurchaseOrder:
+    """Map a QBO PurchaseOrder. item_codes maps Item Id to the code a vendor prints on an
+    invoice: the item's Sku when it has one, otherwise its name."""
+    codes = item_codes or {}
     lines: list[POLine] = []
     for ln in p.get("Line", []):
         detail = ln.get("ItemBasedExpenseLineDetail")
@@ -71,7 +75,8 @@ def po_from_qbo(p: dict[str, Any]) -> PurchaseOrder:
             item = detail.get("ItemRef") or {}
             lines.append(
                 POLine(
-                    sku=str(item.get("name") or item.get("value") or ""),
+                    sku=codes.get(str(item.get("value")))
+                    or str(item.get("name") or item.get("value") or ""),
                     description=ln.get("Description", ""),
                     qty=Decimal(str(detail.get("Qty", 0))),
                     unit_price=money(detail.get("UnitPrice", 0)),
@@ -177,6 +182,10 @@ class QBOLedger:
             return resp.json()
         raise RuntimeError("unreachable")
 
+    def _item_codes(self) -> dict[str, str]:
+        items = self._query("Item", "select * from Item maxresults 1000")
+        return {str(i["Id"]): str(i.get("Sku") or i.get("Name") or i["Id"]) for i in items}
+
     def _query(self, entity: str, sql: str) -> list[dict[str, Any]]:
         data = self._request("GET", "query", params={"query": sql})
         return data.get("QueryResponse", {}).get(entity, [])
@@ -199,14 +208,15 @@ class QBOLedger:
 
     def list_purchase_orders(self, status: str | None = "Open") -> list[PurchaseOrder]:
         rows = self._query("PurchaseOrder", "select * from PurchaseOrder maxresults 1000")
-        pos = [po_from_qbo(p) for p in rows]
+        codes = self._item_codes() if rows else {}
+        pos = [po_from_qbo(p, codes) for p in rows]
         if status:
             pos = [p for p in pos if p.status.lower() == status.lower()]
         return pos
 
     def get_purchase_order(self, doc_number: str) -> PurchaseOrder | None:
         for po in self.list_purchase_orders(status=None):
-            if po.doc_number.upper() == doc_number.upper():
+            if po_key(po.doc_number) == po_key(doc_number):
                 return po
         return None
 
@@ -214,7 +224,7 @@ class QBOLedger:
         return [
             r
             for r in load_receiving_log(self.receiving_log)
-            if r.po_number.upper() == po_number.upper()
+            if po_key(r.po_number) == po_key(po_number)
         ]
 
     # Writes. Only the approval executor calls these.

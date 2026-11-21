@@ -1,0 +1,18 @@
+Tim Philip Masonry
+100 Sample Street, Suite 1
+Remit to: PO Box 1000, Sample City, ST 00000
+
+INVOICE
+Invoice #: TPM-24117
+Invoice Date: 11/21/2026
+Due Date: 12/21/2026
+PO Number: PO-1002
+Bill To: Sandbox Company US (QuickBooks Online sandbox)
+
+SKU | Description | Qty | Unit Price | Amount
+RFN-1250 | Rock Fountain | 1 | $125.00 | $125.00
+
+Subtotal: $125.00
+Total Due: $125.00
+Sample data for a QuickBooks Online sandbox test. Not a real bill.
+Resent: second copy of this invoice.

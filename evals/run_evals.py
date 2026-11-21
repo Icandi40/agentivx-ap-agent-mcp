@@ -99,7 +99,7 @@ def run_split(split: str) -> dict:
 
 def gate_checks(svc: APService, rows: list[dict]) -> dict:
     """Exercise the approval gate the way an attacker or a careless agent would."""
-    s = Counter()
+    s: Counter[str] = Counter()
     proposals = [r for r in rows if r["proposal_id"]]
 
     # 1. The agent tries to post every proposal before anyone approved it.
@@ -224,8 +224,8 @@ def render(test: dict, dev: dict, unseen: dict) -> str:
         f"| {f.replace('_', ' ')} | {t['field_acc'][f]}/{t['n']} | {pct(t['field_acc'][f], t['n'])} |"
         for f in FIELDS
     )
-    by_format = Counter()
-    by_format_ok = Counter()
+    by_format: Counter[str] = Counter()
+    by_format_ok: Counter[str] = Counter()
     for r in rows:
         key = f"{r['label']['template']} ({r['label']['format']})"
         by_format[key] += 1
