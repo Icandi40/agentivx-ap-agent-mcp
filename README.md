@@ -86,6 +86,7 @@ review page and the CLI), which the agent has no way to call.
 | Bank details | Never handled. A scheduled payment references the sandbox company's own bank account by its QuickBooks account id. No account or routing numbers anywhere. |
 | Path tricks through the inbox tool | Filenames must resolve inside the inbox folder. |
 | Quiet edits to history | The audit log is hash-chained; `ap-agent audit` verifies it and reports the first broken line. |
+| Several programs writing at once | The review page, the MCP server and CLI commands are separate processes. Every write to the audit log, the offline ledger and the proposal queue takes a cross-process file lock and works from what is on disk, so the chain stays intact and two processes cannot post the same approved proposal twice. |
 
 ## Measured results
 
@@ -100,7 +101,7 @@ only. Numbers below are from the latest committed run; EVALS.md is the source of
 | Extraction, all six fields right | 60/60 |
 | Correct-flag rate | 60/60 |
 | False approvals prevented | 36/36 bad invoices held; 0 recommended for approval |
-| Time per invoice (extract, match, file proposal) | under 10 ms median on a laptop, offline ledger (varies run to run) |
+| Time per invoice (extract, match, file proposal) | under 20 ms median on a laptop, offline ledger, including a disk flush per audit entry (varies run to run) |
 
 **Unseen split, 30 invoices in two layouts added after the extractor was frozen** (a
 column-style accounting export and an OCR-noisy scan; commit `ad5e6d1` is the freeze):
@@ -242,6 +243,14 @@ was not changed, so the unseen-layout evals still measure the frozen version):
 
 Also fixed while here: `pyproject.toml` allowed MCP SDK 1.x, but the server uses the 2.x API.
 
+Fixed 2026-11-23 after a demo recording: the review page kept the last audit hash in memory,
+so after a CLI command appended to the log, the page's next entry chained to a stale hash and
+`ap-agent audit` reported "chain broken". Writers now lock the file and chain to the last line
+on disk. The same stale-copy problem was fixed in the offline ledger (a long-running process
+could overwrite a bill another process had just written) and the proposal queue (two
+processes could post one approved proposal twice). `tests/test_concurrency.py` covers all
+three with real separate processes.
+
 ## Two-minute demo script
 
 Before you start: `uv run ap-agent reset`, then `uv run ap-agent review` in a second terminal,
@@ -297,6 +306,7 @@ src/ap_agent/
   matching.py      three-way match and duplicate check
   proposals.py     proposal queue and the approval gate
   audit.py         hash-chained audit log
+  filelock.py      cross-process lock shared by the audit log, ledger and proposal queue
   review_app.py    review page for people
   cli.py           review, approve, reject, process, post, audit, qbo-connect
   ledger/          offline stand-in, QuickBooks sandbox adapter, OAuth sign-in
@@ -305,7 +315,7 @@ evals/             synthetic data generator, eval runner, generated dataset
 data/sample/       sample company, demo invoices, X-Ray sample assumptions
 data/sample/live/  sample invoices and receiving log for the live sandbox run
 docs/live-run-2026-11-21/  audit log from that run
-tests/             45 tests, including a check for em and en dashes
+tests/             49 tests, including a check for em and en dashes
 ```
 
 MIT license.

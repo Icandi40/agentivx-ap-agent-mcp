@@ -8,11 +8,11 @@ credentials and make no network calls. All data in it is synthetic sample data.
 from __future__ import annotations
 
 import json
-import threading
 from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
+from ap_agent.filelock import exclusive
 from ap_agent.models import (
     Bill,
     BillLine,
@@ -75,10 +75,21 @@ class OfflineLedger:
 
     def __init__(self, path: Path) -> None:
         self.path = Path(path)
-        self._lock = threading.Lock()
-        self._data = json.loads(self.path.read_text(encoding="utf-8"))
+        if not self.path.exists():
+            raise FileNotFoundError(self.path)
+
+    def _read(self) -> dict[str, Any]:
+        data: dict[str, Any] = json.loads(self.path.read_text(encoding="utf-8"))
         for key in ("vendors", "purchase_orders", "receipts", "bills", "payments"):
-            self._data.setdefault(key, [])
+            data.setdefault(key, [])
+        return data
+
+    @property
+    def _data(self) -> dict[str, Any]:
+        """A fresh copy from disk. Other processes (CLI, review page, MCP server) write
+        this file too, so nothing is cached between calls."""
+        with exclusive(self.path):
+            return self._read()
 
     @classmethod
     def from_seed(cls, seed: Path, state_file: Path) -> OfflineLedger:
@@ -87,9 +98,10 @@ class OfflineLedger:
         state_file.write_text(seed.read_text(encoding="utf-8"), encoding="utf-8")
         return cls(state_file)
 
-    def _save(self) -> None:
+    def _save(self, data: dict[str, Any]) -> None:
+        """Write atomically. Call only while holding the file lock."""
         tmp = self.path.with_suffix(".tmp")
-        tmp.write_text(json.dumps(self._data, indent=2), encoding="utf-8")
+        tmp.write_text(json.dumps(data, indent=2), encoding="utf-8")
         tmp.replace(self.path)
 
     # Reads
@@ -142,8 +154,9 @@ class OfflineLedger:
         po_number: str | None,
         memo: str,
     ) -> Bill:
-        with self._lock:
-            bill_id = f"B{len(self._data['bills']) + 1:05d}"
+        with exclusive(self.path):
+            data = self._read()
+            bill_id = f"B{len(data['bills']) + 1:05d}"
             total = money(sum((ln.amount for ln in lines), Decimal(0)))
             bill = Bill(
                 id=bill_id,
@@ -157,26 +170,27 @@ class OfflineLedger:
                 po_number=po_number,
                 memo=memo,
             )
-            self._data["bills"].append(to_jsonable(bill))
-            self._save()
+            data["bills"].append(to_jsonable(bill))
+            self._save(data)
             return bill
 
     def schedule_payment(self, *, bill_id: str, amount: Decimal, pay_date: str) -> ScheduledPayment:
-        with self._lock:
-            bill = next((b for b in self._data["bills"] if b["id"] == bill_id), None)
+        with exclusive(self.path):
+            data = self._read()
+            bill = next((b for b in data["bills"] if b["id"] == bill_id), None)
             if bill is None:
                 raise ValueError(f"bill {bill_id} not found")
             if money(amount) > money(bill["balance"]):
                 raise ValueError("payment exceeds open balance")
             pay = ScheduledPayment(
-                id=f"P{len(self._data['payments']) + 1:05d}",
+                id=f"P{len(data['payments']) + 1:05d}",
                 bill_id=bill_id,
                 vendor_id=bill["vendor_id"],
                 amount=money(amount),
                 pay_date=pay_date,
                 bank_account_ref="sandbox-checking",
             )
-            self._data["payments"].append(to_jsonable(pay))
+            data["payments"].append(to_jsonable(pay))
             bill["balance"] = str(money(bill["balance"]) - money(amount))
-            self._save()
+            self._save(data)
             return pay

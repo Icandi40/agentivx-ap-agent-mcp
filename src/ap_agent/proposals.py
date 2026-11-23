@@ -19,7 +19,6 @@ import builtins
 import hashlib
 import json
 import sqlite3
-import threading
 import uuid
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
@@ -28,6 +27,7 @@ from pathlib import Path
 from typing import Any
 
 from ap_agent.audit import AuditLog
+from ap_agent.filelock import exclusive
 from ap_agent.ledger.base import Ledger
 from ap_agent.matching import normalize_doc
 from ap_agent.models import BillLine, money, to_jsonable
@@ -81,7 +81,6 @@ class ProposalStore:
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.audit = audit
-        self._lock = threading.Lock()
         self._db = sqlite3.connect(str(self.path), check_same_thread=False)
         self._db.execute(
             """create table if not exists proposals (
@@ -192,7 +191,7 @@ class ProposalStore:
             flags=to_jsonable(flags),
             amount=str(money(amount)),
         )
-        with self._lock:
+        with exclusive(self.path):
             self._save(p)
         self.audit.write(
             "proposal_created",
@@ -219,7 +218,7 @@ class ProposalStore:
             raise
 
     def _approve(self, pid: str, approver: str, note: str) -> Proposal:
-        with self._lock:
+        with exclusive(self.path):
             p = self.get(pid)
             if p.status != "pending":
                 raise ApprovalError(f"{pid} is {p.status}, not pending")
@@ -255,7 +254,7 @@ class ProposalStore:
             raise ApprovalError("reviewer name and reason are required")
         if reviewer.lower() in AGENT_IDENTITIES:
             raise ApprovalError("the agent cannot reject proposals")
-        with self._lock:
+        with exclusive(self.path):
             p = self.get(pid)
             if p.status not in {"pending"}:
                 raise ApprovalError(f"{pid} is {p.status}, not pending")
@@ -274,7 +273,7 @@ class ProposalStore:
     # Execution
 
     def execute(self, pid: str, ledger: Ledger, actor: str = "ap-agent") -> Proposal:
-        with self._lock:
+        with exclusive(self.path):
             p = self.get(pid)
             try:
                 self._check_executable(p, ledger)
