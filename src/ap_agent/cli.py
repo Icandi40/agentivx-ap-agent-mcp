@@ -58,10 +58,20 @@ def main(argv: list[str] | None = None) -> int:
         connect()
         return 0
     if args.cmd == "reset":
-        home = default_paths().home
-        if home.exists():
-            shutil.rmtree(home)
-        print(f"Cleared {home}. The sample company reloads on next use.")
+        paths = default_paths()
+        # Only this state folder's own files. Subfolders (such as a saved live sandbox run
+        # kept under .ap-agent-state/) are left alone.
+        removed = []
+        for f in (paths.ledger, paths.proposals, paths.audit):
+            for target in (f, f.with_name(f.name + ".lock"), f.with_suffix(".tmp")):
+                if target.is_file():
+                    target.unlink()
+                    removed.append(target.name)
+        if paths.inbox.is_dir():
+            shutil.rmtree(paths.inbox)
+            removed.append("inbox/")
+        print(f"Cleared {', '.join(removed) or 'nothing'} in {paths.home}.")
+        print("The sample company reloads on next use. Other folders there were not touched.")
         return 0
     if args.cmd == "review":
         from ap_agent.review_app import serve

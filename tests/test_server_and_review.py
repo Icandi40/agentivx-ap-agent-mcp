@@ -77,3 +77,18 @@ def test_no_em_or_en_dashes_in_project_text():
             if chr(0x2014) in text or chr(0x2013) in text:
                 offenders.append(str(path.relative_to(ROOT)))
     assert offenders == []
+
+
+def test_reset_keeps_other_folders(tmp_path, monkeypatch):
+    from ap_agent.cli import main
+
+    home = tmp_path / "state"
+    (home / "inbox").mkdir(parents=True)
+    (home / "live-run").mkdir()
+    (home / "live-run" / "proposals.sqlite").write_text("keep me")
+    for name in ("ledger.json", "proposals.sqlite", "audit.jsonl", "audit.jsonl.lock"):
+        (home / name).write_text("x")
+    monkeypatch.setenv("AP_AGENT_HOME", str(home))
+    assert main(["reset"]) == 0
+    assert sorted(p.name for p in home.iterdir()) == ["live-run"]
+    assert (home / "live-run" / "proposals.sqlite").read_text() == "keep me"
