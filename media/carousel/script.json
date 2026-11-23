@@ -1,0 +1,12 @@
+[
+  {"id": "s01", "slide": 1, "say": "This is an accounts payable agent that cannot pay a bill without a person. It works inside QuickBooks Online, through an M C P server."},
+  {"id": "s02", "slide": 2, "say": "In accounts payable, the expensive mistakes hide in the matching. Price creep. Paying for goods that never arrived. The same invoice paid twice. And bills with no purchase order at all."},
+  {"id": "s03", "slide": 3, "say": "Every invoice takes the same path. The agent reads it, matches it against the purchase order and the receiving log, and drafts a bill. Nothing is written until a person approves it, and every step is logged."},
+  {"id": "s04", "slide": 4, "say": "The key design choice: the agent has no way to approve anything. It can read, check and propose. Approval lives in a separate program that only people use."},
+  {"id": "s05", "slide": 5, "say": "Ask it to cut a corner, and it refuses. It cannot post before approval, and it cannot approve its own work. Once a reviewer approves, the bill posts with the reviewer's name on it."},
+  {"id": "s06", "slide": 6, "say": "The reviewer sees the flag, the invoice line, the purchase order price and what actually arrived. Approving a flagged invoice needs a written reason."},
+  {"id": "s07", "slide": 7, "say": "Then it ran against a real QuickBooks sandbox. The approved bill posted and was read back. A resent copy and an overpriced copy were both held. The live run also found two gaps the mocked tests had missed, and both were fixed the same day."},
+  {"id": "s08", "slide": 8, "say": "The evaluations are honest. On invoice layouts it knew, it read every field. On new layouts, it read far fewer. But in both sets, it recommended zero bad invoices for approval."},
+  {"id": "s09", "slide": 9, "say": "And the controls are ones a finance team can audit. Approvals pinned to the exact draft. Two people for large bills. Duplicate checks at posting. A sandbox-only lock. And a tamper-evident audit log."},
+  {"id": "s10", "slide": 10, "say": "The code, the evaluations and the live run log are all public. The link is in the comments."}
+]

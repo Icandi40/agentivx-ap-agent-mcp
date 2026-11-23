@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AP Agent carousel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #111215;
+    --panel: #1a1b20;
+    --panel-2: #22232a;
+    --line: #2d2e36;
+    --ink: #eeebe4;
+    --muted: #a3a1a8;
+    --gold-1: #fae38e;
+    --gold: #ddb461;
+    --gold-3: #bf8b3d;
+    --red: #ff8a80;
+    --green: #5fd39a;
+    --amber: #f2b766;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); }
+  @page { size: 1080px 1350px; margin: 0; }
+  .slide {
+    width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    background: radial-gradient(1200px 700px at 85% -10%, rgba(221,180,97,0.10), transparent 60%), var(--bg);
+    color: var(--ink); font-family: Inter, system-ui, sans-serif;
+    padding: 96px 88px 150px; display: flex; flex-direction: column;
+    page-break-after: always; break-after: page;
+  }
+  .kicker {
+    font-family: Montserrat, sans-serif; font-weight: 600; font-size: 24px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 36px;
+  }
+  h1, h2 { font-family: Montserrat, sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+  h1 { font-size: 84px; line-height: 1.08; }
+  h2 { font-size: 64px; line-height: 1.12; margin-bottom: 48px; }
+  .gold { background: linear-gradient(180deg, var(--gold-1), var(--gold) 55%, var(--gold-3));
+          -webkit-background-clip: text; background-clip: text; color: transparent; }
+  p.lead { font-size: 38px; line-height: 1.45; color: var(--muted); margin-top: 44px; }
+  .foot {
+    position: absolute; left: 88px; right: 88px; bottom: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 24px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 28px;
+  }
+  .foot .brand { display: flex; align-items: center; gap: 16px; }
+  .foot .brand img { height: 40px; }
+  .foot .num { font-family: Montserrat, sans-serif; font-weight: 600; color: var(--gold); letter-spacing: 0.08em; }
+  .note { font-size: 26px; color: var(--muted); line-height: 1.45; margin-top: auto; }
+
+  /* lists */
+  .items { display: flex; flex-direction: column; gap: 26px; }
+  .item { display: flex; gap: 28px; align-items: flex-start; background: var(--panel);
+          border: 1px solid var(--line); border-radius: 22px; padding: 30px 34px; }
+  .item .n { font-family: Montserrat, sans-serif; font-weight: 700; font-size: 34px; color: var(--gold);
+             min-width: 52px; }
+  .item .t { font-size: 36px; line-height: 1.35; font-weight: 500; }
+  .item .t small { display: block; font-size: 28px; color: var(--muted); font-weight: 400; margin-top: 6px; }
+
+  /* flow */
+  .flow { display: flex; flex-direction: column; gap: 0; }
+  .step { display: flex; gap: 26px; align-items: center; }
+  .dot { width: 54px; height: 54px; border-radius: 50%; border: 2px solid var(--gold); color: var(--gold);
+         display: grid; place-items: center; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 26px;
+         flex: none; background: var(--bg); }
+  .dot.human { background: var(--gold); color: #1a1407; }
+  .step .t { font-size: 34px; line-height: 1.3; }
+  .step .t small { display: block; font-size: 26px; color: var(--muted); }
+  .rail { width: 2px; height: 34px; background: var(--line); margin-left: 26px; }
+
+  /* two columns */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .col { background: var(--panel); border: 1px solid var(--line); border-radius: 24px; padding: 36px 34px; }
+  .col h3 { font-family: Montserrat, sans-serif; font-size: 30px; font-weight: 600; margin-bottom: 8px; }
+  .col .sub { font-size: 24px; color: var(--muted); margin-bottom: 26px; }
+  .tool { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 25px; padding: 12px 0;
+          border-bottom: 1px solid var(--line); }
+  .tool:last-child { border-bottom: 0; }
+  .tool.warn { color: var(--amber); }
+  .col.people { border-color: rgba(221,180,97,0.55); }
+  .missing { margin-top: 30px; font-size: 30px; line-height: 1.4; }
+  .missing b { color: var(--red); }
+
+  /* terminal */
+  .term { background: #0b0c0e; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
+  .term .bar { height: 46px; background: var(--panel-2); display: flex; align-items: center; gap: 10px; padding: 0 20px; }
+  .term .bar i { width: 14px; height: 14px; border-radius: 50%; background: #3a3b44; display: block; }
+  .term pre { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 23.5px; line-height: 1.52;
+              padding: 26px 30px; white-space: pre-wrap; color: #d7d5cf; }
+  .c-cmd { color: var(--gold); }
+  .c-bad { color: var(--red); }
+  .c-ok { color: var(--green); }
+  .c-hold { color: var(--amber); }
+
+  /* screenshot */
+  .shot { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); }
+  .shot-label { font-size: 26px; color: var(--muted); margin: 8px 0 14px; }
+  .shot + .shot-label { margin-top: 30px; }
+  .shot img { display: block; width: 100%; }
+
+  /* bill card */
+  .bill { background: var(--panel); border: 1px solid rgba(221,180,97,0.55); border-radius: 24px; padding: 34px 38px; }
+  .bill .head { font-family: Montserrat, sans-serif; font-weight: 600; font-size: 28px; color: var(--gold); margin-bottom: 18px; }
+  .kv { display: grid; grid-template-columns: 230px 1fr; font-size: 29px; }
+  .kv div { padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .kv div:nth-last-child(-n+2) { border-bottom: 0; }
+  .kv .k { color: var(--muted); }
+  .kv .v { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 26px; }
+  .held { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+  .held div { font-size: 29px; line-height: 1.35; display: flex; gap: 18px; align-items: baseline; }
+  .tag { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 22px; padding: 4px 12px; border-radius: 999px;
+         border: 1.5px solid currentColor; white-space: nowrap; }
+
+  /* eval table */
+  table { width: 100%; border-collapse: separate; border-spacing: 0; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 24px 22px; border-bottom: 1px solid var(--line); font-size: 30px; vertical-align: top; }
+  th { font-family: Montserrat, sans-serif; font-weight: 600; font-size: 26px; color: var(--muted); }
+  td.big { font-family: Montserrat, sans-serif; font-weight: 700; font-size: 42px; white-space: nowrap; }
+  th:first-child, td:first-child { width: 46%; }
+  tr.key td { background: rgba(95,211,154,0.07); }
+  tr.key td.big { color: var(--green); }
+  .tbl { background: var(--panel); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
+
+  .url { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 34px; color: var(--gold);
+         background: var(--panel); border: 1px solid rgba(221,180,97,0.55); border-radius: 18px; padding: 26px 30px;
+         margin-top: 48px; word-break: break-all; }
+  .cover-logo { width: 420px; margin-bottom: 70px; }
+  .swipe { font-family: Montserrat, sans-serif; font-weight: 600; color: var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- 1. Cover -->
+<section class="slide" id="s1">
+  <img class="cover-logo" src="assets/logo-nav.png" alt="AgentivX Solutions">
+  <div class="kicker">Forward deployed build · open source</div>
+  <h1>An AP agent that <span class="gold">cannot pay a bill</span> without a person.</h1>
+  <p class="lead">It works inside QuickBooks Online through an MCP server. Every write waits for a human to approve it.</p>
+  <div class="foot"><div class="brand">Sheena Lindsey-Smith</div><div class="swipe">Swipe →</div></div>
+</section>
+
+<!-- 2. Problem -->
+<section class="slide" id="s2">
+  <div class="kicker">The problem</div>
+  <h2>The expensive accounts payable mistakes hide in the matching.</h2>
+  <div class="items">
+    <div class="item"><div class="n">1</div><div class="t">Price creep<small>The invoice price is higher than the PO price.</small></div></div>
+    <div class="item"><div class="n">2</div><div class="t">Paying for goods that never arrived<small>Billed for more than the receiving log shows.</small></div></div>
+    <div class="item"><div class="n">3</div><div class="t">The same invoice paid twice<small>Resent by the vendor, keyed in again.</small></div></div>
+    <div class="item"><div class="n">4</div><div class="t">No purchase order at all<small>Nothing to check the bill against.</small></div></div>
+  </div>
+  <div class="foot"><div class="brand"><img src="assets/icon.png" alt="">AP Agent over MCP</div><div class="num">02 / 10</div></div>
+</section>
+
+<!-- 3. How it works -->
+<section class="slide" id="s3">
+  <div class="kicker">How it works</div>
+  <h2>Every invoice takes the same path, and every step is logged.</h2>
+  <div class="flow">
+    <div class="step"><div class="dot">1</div><div class="t">Invoice arrives<small>PDF or email text</small></div></div>
+    <div class="rail"></div>
+    <div class="step"><div class="dot">2</div><div class="t">Agent reads the fields<small>vendor, invoice number, dates, PO, lines, total</small></div></div>
+    <div class="rail"></div>
+    <div class="step"><div class="dot">3</div><div class="t">Three-way match<small>invoice vs purchase order vs receiving log</small></div></div>
+    <div class="rail"></div>
+    <div class="step"><div class="dot">4</div><div class="t">Agent drafts a proposal<small>nothing is written to QuickBooks yet</small></div></div>
+    <div class="rail"></div>
+    <div class="step"><div class="dot human">5</div><div class="t">A person approves or rejects<small>with their name on the decision</small></div></div>
+    <div class="rail"></div>
+    <div class="step"><div class="dot">6</div><div class="t">The approved bill posts to QuickBooks<small>after every check runs again</small></div></div>
+  </div>
+  <div class="foot"><div class="brand"><img src="assets/icon.png" alt="">AP Agent over MCP</div><div class="num">03 / 10</div></div>
+</section>
+
+<!-- 4. No approve tool -->
+<section class="slide" id="s4">
+  <div class="kicker">The design choice</div>
+  <h2>The agent has no approve tool. Not hidden. Not there.</h2>
+  <div class="cols">
+    <div class="col">
+      <h3>MCP server</h3>
+      <div class="sub">what the agent can call</div>
+      <div class="tool">list_vendors</div>
+      <div class="tool">list_purchase_orders</div>
+      <div class="tool">list_open_bills</div>
+      <div class="tool">check_invoice</div>
+      <div class="tool">propose_bill</div>
+      <div class="tool">propose_payment</div>
+      <div class="tool warn">post_approved_proposal</div>
+    </div>
+    <div class="col people">
+      <h3>Review page and CLI</h3>
+      <div class="sub">a separate program, for people</div>
+      <div class="tool">approve</div>
+      <div class="tool">reject</div>
+    </div>
+  </div>
+  <p class="missing"><span style="color:var(--amber)">post_approved_proposal</span> refuses anything a person has not approved. Approve and reject do not exist on the agent's side.</p>
+  <div class="foot"><div class="brand"><img src="assets/icon.png" alt="">AP Agent over MCP</div><div class="num">04 / 10</div></div>
+</section>
+
+<!-- 5. Gate in action -->
+<section class="slide" id="s5">
+  <div class="kicker">The gate, in real output</div>
+  <h2>Ask it to cut a corner and it refuses.</h2>
+  <div class="term"><div class="bar"><i></i><i></i><i></i></div><pre>{{CLI}}</pre></div>
+  <p class="note">Real terminal output from the demo, run on the offline sample company.</p>
+  <div class="foot"><div class="brand"><img src="assets/icon.png" alt="">AP Agent over MCP</div><div class="num">05 / 10</div></div>
+</section>
+
+<!-- 6. Review page -->
+<section class="slide" id="s6">
+  <div class="kicker">The review page</div>
+  <h2 style="font-size:58px">A reviewer sees the invoice, the PO and what arrived, side by side.</h2>
+  <div class="shot-label">The flag the agent raised</div>
+  <div class="shot"><img src="build/review-checks.png" alt="Review page check: price variance, invoiced 138.45, PO price 127.35"></div>
+  <div class="shot-label">Invoice line against the PO and what arrived</div>
+  <div class="shot"><img src="build/review-match-trim.png" alt="Invoice line at 138.45 next to PO price 127.35 and 60 received"></div>
+  <p class="note">Close-ups of the real review page. Approving a flagged invoice requires a written override note, and it goes in the audit log.</p>
+  <div class="foot"><div class="brand"><img src="assets/icon.png" alt="">AP Agent over MCP</div><div class="num">06 / 10</div></div>
+</section>
+
+<!-- 7. Live sandbox -->
+<section class="slide" id="s7">
+  <div class="kicker">Live run · 21 Nov 2026</div>
+  <h2>Then it ran against a real QuickBooks Online sandbox.</h2>
+  <div class="bill">
+    <div class="head">Bill 145, read back from QuickBooks after approval</div>
+    <div class="kv">
+      <div class="k">Invoice</div><div class="v">TPM-24117</div>
+      <div class="k">Vendor</div><div class="v">Tim Philip Masonry</div>
+      <div class="k">Total</div><div class="v">$125.00</div>
+      <div class="k">Matched to</div><div class="v">PO 1002</div>
+      <div class="k">Note</div><div class="v">Approved by Sheena Lindsey-Smith</div>
+    </div>
+  </div>
+  <div class="held">
+    <div><span class="tag c-hold">held</span>The same invoice, sent again: duplicate.</div>
+    <div><span class="tag c-hold">held</span>Billed at $137.50 against a $125.00 PO: price variance.</div>
+    <div><span class="tag c-ok">fixed</span>Two gaps the mocked tests missed, found and fixed on the day.</div>
+  </div>
+  <p class="note">Intuit's sandbox company with sample invoices. Not a client.</p>
+  <div class="foot"><div class="brand"><img src="assets/icon.png" alt="">AP Agent over MCP</div><div class="num">07 / 10</div></div>
+</section>
+
+<!-- 8. Evals -->
+<section class="slide" id="s8">
+  <div class="kicker">The honest evals</div>
+  <h2 style="font-size:58px">Perfect on layouts it knew. Weak on ones it never saw. <span class="gold">Safe on both.</span></h2>
+  <div class="tbl">
+    <table>
+      <tr><th></th><th>Known layouts<br>60 invoices</th><th>New layouts<br>30 invoices</th></tr>
+      <tr><td>All fields read correctly</td><td class="big">60/60</td><td class="big">4/30</td></tr>
+      <tr><td>Verdict matched the label</td><td class="big">60/60</td><td class="big">15/30</td></tr>
+      <tr class="key"><td>Bad invoices recommended for approval</td><td class="big">0 of 36</td><td class="big">0 of 18</td></tr>
+      <tr><td>Clean invoices held for a person</td><td class="big">0/24</td><td class="big">10/12</td></tr>
+    </table>
+  </div>
+  <p class="note">Synthetic invoices. The new layouts were added after the extractor was frozen in git, then measured without tuning. When it cannot read something, it holds the invoice for a person.</p>
+  <div class="foot"><div class="brand"><img src="assets/icon.png" alt="">AP Agent over MCP</div><div class="num">08 / 10</div></div>
+</section>
+
+<!-- 9. Guardrails -->
+<section class="slide" id="s9">
+  <div class="kicker">Guardrails</div>
+  <h2>Controls a finance team can audit.</h2>
+  <div class="items">
+    <div class="item"><div class="n">✓</div><div class="t">Approvals are pinned to a hash of the draft<small>Change the draft after approval and it will not post.</small></div></div>
+    <div class="item"><div class="n">✓</div><div class="t">Two different people for $10,000 and over</div></div>
+    <div class="item"><div class="n">✓</div><div class="t">Duplicates checked again at the moment of posting</div></div>
+    <div class="item"><div class="n">✓</div><div class="t">Locked to Intuit's sandbox host in code</div></div>
+    <div class="item"><div class="n">✓</div><div class="t">Every step in a hash-chained audit log<small>Edit a past line and the check reports where.</small></div></div>
+  </div>
+  <div class="foot"><div class="brand"><img src="assets/icon.png" alt="">AP Agent over MCP</div><div class="num">09 / 10</div></div>
+</section>
+
+<!-- 10. CTA -->
+<section class="slide" id="s10">
+  <img class="cover-logo" style="width:360px;margin-bottom:60px" src="assets/logo-nav.png" alt="AgentivX Solutions">
+  <h2 style="font-size:70px">The code, the evals and the live run log are <span class="gold">public</span>.</h2>
+  <div class="url">github.com/Icandi40/agentivx-ap-agent-mcp</div>
+  <p class="lead">Built by Sheena Lindsey-Smith, AgentivX Solutions. AI agents that work inside the systems a business already runs, with people in control.</p>
+  <div class="foot"><div class="brand"><img src="assets/icon.png" alt="">Link in the comments</div><div class="num">10 / 10</div></div>
+</section>
+
+</body>
+</html>

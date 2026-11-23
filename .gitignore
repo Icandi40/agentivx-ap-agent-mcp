@@ -9,3 +9,5 @@ dist/
 build/
 .env
 .claude/
+media/carousel/build/
+media/carousel/out/
